@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>ODFW trout stocking sites - SW Oregon</name>
+    <description><![CDATA[Trout stocking sites within the Oregon Department of Fish and Wildlife's Southwest Region.]]></description>
+    <Style id="icon-503-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-53-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/53-fishing.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-53-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/53-fishing.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-53">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-53-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-53-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Fishing locations</name>
+      <Placemark>
+        <name>Applegate Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7avfVWURubODhVgDqWbILPoeHAF9JZh--pqC9VY9R0VMe8_7ahCyiBEmUX57VVS5nM2L1uBGSix12w8CjwsqwC2NOe6xdi8p6dFRCFv_g2kiovXOkwZAujWCWLeXfIPjJrxy1rh10FQEGUmXMD3A" height="200" width="auto" /><br><br>This is a 988-acre reservoir in southwestern Oregon just north of the California border. The lake was created in 1980 by damming the mainstream of the Applegate River 47 miles upstream from its confluence with the Rogue. It is named after Lindsay Applegate, a prominent early Oregon pioneer. This lake is located in the Skskiyou Mountains within the Rogue River-Siskiyou National Forest (http://www.fs.usda.gov/rogue-siskiyou/). This is a flood control reservoir and depth varies dramatically between spring and fall.<br><br> <br>The lake is popular for cycling, boating, canoeing, fishing and hiking the various trails near the lake. The elevation of the lake is 1,987 feet. Camping: Camping is available at Hart-Tish (http://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/camping-cabins/recarea?recid=70232&actid=29),and Watkins (http://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/camping-cabins/recarea?recid=70404&actid=29) campgrounds. Dispersed hike-in camping is also available around the reservoir at French Gulch, Latgawa Cove, Streamtown, Harr Point and Tipsu Tyee campgrounds. Seattle Bar is a day-use only area at the south end of the reservoir. Jackson Picnic Park and Flumet Flat campgrounds are located about 5.6 miles downstream from the reservoir. Fees at some locations. Private concessionaire available seasonally.<br> <br>Boaters are subject to a 10 m.p.h. speed limit.<br><br>Fish species: trout, chinook slamon, largemouth bass, smallmouth bass, crappie<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7avfVWURubODhVgDqWbILPoeHAF9JZh--pqC9VY9R0VMe8_7ahCyiBEmUX57VVS5nM2L1uBGSix12w8CjwsqwC2NOe6xdi8p6dFRCFv_g2kiovXOkwZAujWCWLeXfIPjJrxy1rh10FQEGUmXMD3A</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.125603,42.050838,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Arizona Pond</name>
+        <description><![CDATA[This is a one-acre pond located at Arizona Beach State Park Recreation Area (http://www.oregonstateparks.org/park_258.php) approximately 15 miles south of Port Orford (http://www.portorford.org/). It is stocked with catchable and trophy trout in the spring and early summer. Fishing can be good all summer, depending on water conditions and stocking level. The pond has good bank access and a great place for kids to fish. The pond is managed for youths 17 and under.<br><br>Fish species: rainbow trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <Point>
+          <coordinates>
+            -124.391327,42.608822,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bluebill Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5OoVrTZopTCYFCBk-7jnOKSPKmz0LLwpgwQBZ6fv-TYEVV1MnmA4H-UNHcT3IjjH_vmhLBJWD5AWztcw-AeuRUt3Qh3k987HYjZJo7AqDXr1f1Fa3HDM9m3g6Hok1R9tXCpQpdQMjXFj-bCPVqP7EkCw" height="200" width="auto" /><br><br>This lake is located within the Oregon Dunes National Recreation Area (http://www.fs.usda.gov/wps/portal/fsinternet/!ut/p/c5/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gDfxMDT8MwRydLA1cj72DTgBAjAwgAykeaxcN4jhYG_h4eYX5hPgYwefy6w0H24dcPNgEHcDTQ9_PIz03VL8iNMMgycVQEAObEnGA!/dl3/d3/L2dJQSEvUUt3QS9ZQnZ3LzZfME80MEkxVkFCOTBFMktTNUJIMjAwMDAwMDA!?navtype=BROWSEBYSUBJECT&recid=42465&actid=&navid=110000000000000&pnavid=&ss=110612&position=&ttype=recarea&pname=Siuslaw%2520National%2520Forest%2520-%2520Oregon%2520Dunes%2520National%2520Recreation%2520Area) about 3 miles north of North Bend, Ore. Nearby Bluebill Campground (http://www.fs.usda.gov/wps/portal/fsinternet/!ut/p/c4/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gDfxMDT8MwRydLA1cj72BTJw8jAwjQL8h2VAQAzHJMsQ!!?ss=110612&ttype=recarea&recid=42647&actid=31&navtype=BROWSEBYSUBJECT&position=BROWSEBYSUBJECT&navid=110000000000000&pnavid=&cid=null&pname=Oregon+Dunes+National+Recreation+Area+-+Bluebill+Campground) has camping sites for tents, cars, RVs and trailers. A one-mile hiking trail circles the lake.<br> <br>Fish species: rainbow trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5OoVrTZopTCYFCBk-7jnOKSPKmz0LLwpgwQBZ6fv-TYEVV1MnmA4H-UNHcT3IjjH_vmhLBJWD5AWztcw-AeuRUt3Qh3k987HYjZJo7AqDXr1f1Fa3HDM9m3g6Hok1R9tXCpQpdQMjXFj-bCPVqP7EkCw</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.261594,43.44918,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bolan Lake</name>
+        <description><![CDATA[Species Stocked: rainbow trout<br><br>Description: 13 acres surface area on USFS property<br><br>Amenities: primitive boat ramp. <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <Point>
+          <coordinates>
+            -123.458921,42.022979,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bradley Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v6_yeE-k19EiuizjAQVrv_YFhxd1sDRHgVWb4NqQ8Yc7fMYiwGYvmmwT0rsynvrTlhQG4xIWbKUfOf1AaD-T97aRUAmrg31y0IDmU4TvWAb-IKG-Xlfufa2-9318j23WAl4IClaDFz-DSgdnis1xrcFMslsQkzRmAREhA" height="200" width="auto" /><br><br>This is a 30-acre lake about three miles north of Bandon, Ore. ODFW owns a boat ramp. Bank fishing is limited because most of the lakeshore is privately owned.<br> <br>Fish species: rainbow trout, largemouth bass<br><br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)<br><br><img src="https://lh3.googleusercontent.com/umsh/AN6v0v6fndg3eOc61yDOE2Te01uGx_cbqqt88o671BBzRfB4--U" height="200" width="auto" />]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v6_yeE-k19EiuizjAQVrv_YFhxd1sDRHgVWb4NqQ8Yc7fMYiwGYvmmwT0rsynvrTlhQG4xIWbKUfOf1AaD-T97aRUAmrg31y0IDmU4TvWAb-IKG-Xlfufa2-9318j23WAl4IClaDFz-DSgdnis1xrcFMslsQkzRmAREhA https://lh3.googleusercontent.com/umsh/AN6v0v6fndg3eOc61yDOE2Te01uGx_cbqqt88o671BBzRfB4--U</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.424372,43.06355,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Burma Pond (Secesh Reservoir)</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5UQD0MUo6r78v35OqRwW9vLVZ5EXQdFEeI09mr9wlHGYa2Tm-d61SUw_p9ZLtUpMpu7HdVZEbFWazpjcwp8ESwXUzHZ1U7bTyGhFLDZW7-6lMafeEKdwEkv8y7zAZt45NRyR2zP5Al9kWYrS0m3Q" height="200" width="auto" /><br><br>This is a 4.5-acre pond located approximately 8 miles from the community of Wolf Creek in Josephine County, Oregon. There is easy access along the bank side of this pond. Only non-motorized boats are allowed. Due to the steepness of BLM Road #33-5-15.2, the last half mile to the site, four-wheel-drive is recommended.<br> <br>Fish species: rainbow trout, largemouth bass, bluegill<br> <br><br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5UQD0MUo6r78v35OqRwW9vLVZ5EXQdFEeI09mr9wlHGYa2Tm-d61SUw_p9ZLtUpMpu7HdVZEbFWazpjcwp8ESwXUzHZ1U7bTyGhFLDZW7-6lMafeEKdwEkv8y7zAZt45NRyR2zP5Al9kWYrS0m3Q</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.274101,42.703973,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Butterfield Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7NGsx6kR2pCngUiAE1MjvMPD2eVX-AmeoM4JFQhPhyUrlcbQ1R5Y-SzKsQycqLoK1oyqXKBoFYDlJTvMFHRNqi7xD9qTckM9qI19C3ZAp5fGy95ieSXUfNX2p9FLDf9ebdgN9WR9LLAMFqYw64jLQzI8LIuO4" height="200" width="auto" /><br><br>This 50-acre lake is located about six miles north of Coos Bay, and just west of Highway 101 in the Riley Ranch Campground (http://www.co.coos.or.us/Departments/CoosCountyParks/RileyRanch.aspx) operated by Coos County Parks (http://www.co.coos.or.us/Departments/CoosCountyParks.aspx). An access road from the campground to the lake allows trout stocking trucks to reach the lake, and provides access for anglers to launch small “cartop” boats and canoes. Fishing docks also provide angler access. <br><br>Fish species: rainbow trout, largemouth bass, bluegill, warmouth<br><br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7NGsx6kR2pCngUiAE1MjvMPD2eVX-AmeoM4JFQhPhyUrlcbQ1R5Y-SzKsQycqLoK1oyqXKBoFYDlJTvMFHRNqi7xD9qTckM9qI19C3ZAp5fGy95ieSXUfNX2p9FLDf9ebdgN9WR9LLAMFqYw64jLQzI8LIuO4</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.219505,43.519054,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dutch Herman Pond</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v62yRTpFA1eTZu10cqR90pTVigzRivsSi1e0qmKwykLhdNC5mdgf0mfgZxVSweljo4hs5sbN80tveuy9RZqns6JGEgPzZSvpO8yqZ7rhKfMJ1RJFSYz1-crpVjlw7GLYQxAc5HHD_t85nsuGDs65mAvtju0M7dI" height="200" width="auto" /><br><br>This is a 2-acre pond east of the community of Wolf Creek.<br><br>Fish species: rainbow trout, bass, bluegill<br><br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v62yRTpFA1eTZu10cqR90pTVigzRivsSi1e0qmKwykLhdNC5mdgf0mfgZxVSweljo4hs5sbN80tveuy9RZqns6JGEgPzZSvpO8yqZ7rhKfMJ1RJFSYz1-crpVjlw7GLYQxAc5HHD_t85nsuGDs65mAvtju0M7dI</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.265615,42.699252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Eel Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7BNV9crTmSuoB3aBF2To-5KEdNVuYfXt-tgyoF6_s7fdvIYB2-L96p_P9zG8Ug72x5H6G8Kh9yw4DNwOcO6neo6rHP8Rrje_XNLcN2nlX5aTZF27hTdXj2UZ9RHLLZTNWr4s8WahltQoX4_VAM" height="200" width="auto" /><br><br>This is a 355-acre lake located along Hwy. 101 approximately 13 miles north of North Bend, Ore. It consists of two long narrow arms in the shape of a U. Tugman State Park (http://www.oregonstateparks.org/park_98.php) is adjacent to the lake and has both a boat ramp and an accessible fishing pier.<br><br>Fish species: rainbow trout, cutthroat troutm largemouth bass, smallmouth bass, yellow perch<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7BNV9crTmSuoB3aBF2To-5KEdNVuYfXt-tgyoF6_s7fdvIYB2-L96p_P9zG8Ug72x5H6G8Kh9yw4DNwOcO6neo6rHP8Rrje_XNLcN2nlX5aTZF27hTdXj2UZ9RHLLZTNWr4s8WahltQoX4_VAM</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.177351,43.604091,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Emigrant Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v6YqHR7hNqLFHE2-Mp0O_C_KpcTeIFNfomeNiyyeJ9zQcNn8XpUlIRov1W-ScVCbEqba3Xo6mU7EClNCosLT5Ell57SyaeJ5hc20Gd4l66N7Whb2Ve1VAS8ZE0rwPGu4W39YJHB3cC_oSb83r7xGj5SwHtc010Ibw" height="200" width="auto" /><br><br>Emigrant Lake is one of the most popular recreational destinations in Jackson County, Oregon. This lake has numerous amenities including developed campgrounds and picnic areas, two boat ramps, restrooms with showers. Reservations are recommended to camp at Emigrant Lake County Park (http://www.co.jackson.or.us/Page.asp?NavID=3525).<br> <br>Caution: This reservoir is listed under a health advisory for high levels of mercury. The health advisory suggests that anglers only eat trout stocked in the reservoir because they have not had as much time to absorb mercury as fish that spend their whole life in the reservoir.<br><br>Fish species: rainbow trout, largemouth bass, smallmouth bass, black crappie<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v6YqHR7hNqLFHE2-Mp0O_C_KpcTeIFNfomeNiyyeJ9zQcNn8XpUlIRov1W-ScVCbEqba3Xo6mU7EClNCosLT5Ell57SyaeJ5hc20Gd4l66N7Whb2Ve1VAS8ZE0rwPGu4W39YJHB3cC_oSb83r7xGj5SwHtc010Ibw</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.616997,42.15961,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Empire Lakes</name>
+        <description><![CDATA[Empire Lakes are two lakes located in northwest Coos Bay, Ore. The lakes are located in John Topits Park, a 120-acre park, which has a boat ramp, day use area, picnic tables, benches, and swimming beach. The lakes are surrounded by forests accessible by more than five miles of mostly paved walking trails. Motorized boats are not permitted on the lakes.<br><br>Fish species: rainbow trout, bass, bluegill, perch catfish<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <Point>
+          <coordinates>
+            -124.262962,43.396703,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Expo Pond</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v6kCqCXBBh281FcM5g97bNxd8QiX5A-eROq3hRcjqN1bYLjA02_ANDxy32LJ2T9Ofdezt-lU44Ul3eha67XmOCyEbDwD7CPCJ-kcAD69WzqF-8fSVwcSRW4qAQGkYQP2gmGp-aTPCnIYcfDThZrIA" height="200" width="auto" /><br><br>This pond is located at the Jackson County Fairgrounds in Central Point, Ore., just north of the Expo buildings. Easy bank access makes this a good choice for younger anglers.<br><br>Fish species: rainbow trout, largemouth bass, crappie, bluegill<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v6kCqCXBBh281FcM5g97bNxd8QiX5A-eROq3hRcjqN1bYLjA02_ANDxy32LJ2T9Ofdezt-lU44Ul3eha67XmOCyEbDwD7CPCJ-kcAD69WzqF-8fSVwcSRW4qAQGkYQP2gmGp-aTPCnIYcfDThZrIA</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.913837,42.388822,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fish Lake - Rogue Watershed</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v6vBFnnvFqUH8DuyUIsH1eVYx6x4IYOuyCuevpFQwSXVByUeY3d0534xeh9JEFq94dBNndViXgja743C_nfXR9kboBhK31LayJ_h1f_UYW9O4ZI_4hIKgTBGpSj_pq_VfnG_WZeah-3oeXt1SpfMw" height="200" width="auto" /><br><br>Fish Lake is a 483-acre lake in southern Oregon about 35 miles northeast of Medford.<br> <br>The lake has a maximum depth of 31 feet and an average depth of 18 feet. The lake is located within the Rogue River-Siskiyou National Forest (http://www.fs.usda.gov/rogue-siskiyou/). Camping is available nearby at Fish Lake (http://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/recarea/?recid=69728), North Fork (http://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/recarea/?recid=69832) and Doe Point (http://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/recarea/?recid=69716) campgrounds. Popular activities include swimming, boating, hiking horseback riding, hunting, fishing and wildlife viewing. This is one of only two lakes in Oregon where tiger trout are being stocked on an experimental basis. Fish Lake Resort (http://www.fishlakeresort.net/) offers rental cabins, RV sites, primitive campsites, boat rentals and moorage. Boaters are subject to a 10 m.p.h. speed limit.<br><br>Fish species: rainbow trout, brook trout, tiger trout, spring chinook<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v6vBFnnvFqUH8DuyUIsH1eVYx6x4IYOuyCuevpFQwSXVByUeY3d0534xeh9JEFq94dBNndViXgja743C_nfXR9kboBhK31LayJ_h1f_UYW9O4ZI_4hIKgTBGpSj_pq_VfnG_WZeah-3oeXt1SpfMw</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.319653,42.394202,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Floras Lake</name>
+        <description><![CDATA[This is a 250-acre lake located about 17 miles south of Bandon, Ore. The lake has a healthy population of cutthroat trout and some largemouth bass. The lake is also stocked with catchable and trophy trout in the spring. Access to the lake is mainly by boat as bank access is limited. This lake reaches a maximum depth of about 50 feet. Boice-Cope County Park (http://www.co.curry.or.us/parks/parks.htm) provides camping and a boat ramp.<br> <br>Fish species: rainbow trout, cutthroat trout, largemouth bass<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <Point>
+          <coordinates>
+            -124.502134,42.901684,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Garrison Lake</name>
+        <description><![CDATA[This is a 134-acre lake located in Port Orford, Ore. It is stocked several times in the spring with trophy and catchable trout. Fishing can be good through May but warmer water and aquatic weeds make for tough fishing through summer. The best way to fish the lake is by boat but bank fishing can be good of the fishing pier on 12th street. Boat ramps are located at 12th Street and Pinehurst Roads. Anglers should keep an eye on the weather and target the lake when winds are light. <br>Fish species: rainbow trout, cutthroat trout, largemouth bass<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <Point>
+          <coordinates>
+            -124.5081,42.75571,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Howard Prairie Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7sdMgFtXvtgLjYT539nWOO0TirN9uK3lKuH-1zohBlAFYN9xfPDp4SCn5wwk-tX_KNuEstXYbf2h7HlaPsAPwR8M_mFO4qyyNqHIugmitICtyVRV2MOaPYblXeQYsio9JdJvKtomJPFZsyLMPIjrDuGQ09kMYJp00" height="200" width="auto" /><br><br>Howard Prairie Lake is a popular destination in sourthern Oregon that offers an abundance of recreational opportunities, including excellent trout and bass fishing. This 1,990-acre reservoir is located about 43 miles south of Medford and 24 miles east of Ashland. It has a maximum depth of 80 feet and an average depth of 35 feet. The lake is formed by the 100-foot tall Howard Prairie Dam, which impounds Beaver Creek, in the Klamath River watershed.<br> <br>Amenities: Asperkaha Park (http://www.co.jackson.or.us/Page.asp?NavID=3535), Grizzly County Park (http://www.co.jackson.or.us/Page.asp?NavID=3536), Klum Landing County Park (http://www.co.jackson.or.us/Page.asp?NavID=3537), Lily Glen County Park (http://www.co.jackson.or.us/Page.asp?NavID=3538), Sugar Pine County Park (http://www.co.jackson.or.us/Page.asp?NavID=3539), Willow Point County Park (http://www.co.jackson.or.us/Page.asp?NavID=3529), The Resort at Howard Prairie Lake<br> <br>Fish species: rainbow trout, bass<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7sdMgFtXvtgLjYT539nWOO0TirN9uK3lKuH-1zohBlAFYN9xfPDp4SCn5wwk-tX_KNuEstXYbf2h7HlaPsAPwR8M_mFO4qyyNqHIugmitICtyVRV2MOaPYblXeQYsio9JdJvKtomJPFZsyLMPIjrDuGQ09kMYJp00</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.410505,42.240131,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hyatt Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v60GugIL8WSdlutTNs_voXxPVrOpMocpInyOMea_nPr_o0MS3sTYJ70EN0AZ3WRzISAqa2Qotyoz0tXCjgRL4trz66vdNDfN31du9mCSWfuACBHj9I6Fni737RkXDjQftO45vNtB3OeIjlxBLS5nCDCvX75mA" height="200" width="auto" /><br><br>This is a 950-acre reservoir about 13 miles east of Ashland, Ore. There is a large BLM campground (http://www.blm.gov/or/resources/recreation/site_info.php?siteid=135) with boat ramp at the south end of the reservoir. Boats are restricted to 10 m.p,h. on this lake<br> <br>Fish species: rainbow trout, largemouth bass, crappie, bluegill, brown bullhead<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v60GugIL8WSdlutTNs_voXxPVrOpMocpInyOMea_nPr_o0MS3sTYJ70EN0AZ3WRzISAqa2Qotyoz0tXCjgRL4trz66vdNDfN31du9mCSWfuACBHj9I6Fni737RkXDjQftO45vNtB3OeIjlxBLS5nCDCvX75mA</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.46829,42.173137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Selmac</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v6A7Rf2hHXpkXqGepm9P-fVuiAp40Susm030Mfdl1QyKZ_wt-PM9YxzESUO5yIFY8adnZ0L6cGebKo_ziQ3bZsJ9IPwv9LDbwOpsujg5xmQIPWL_4gn-g2fCz-cSMF-8_EL5mgQac55U2L4VACa7foq" height="200" width="auto" /><br><br>Lake Selmac is a 160-acre lake in Josephine County, approximately 25 miles southwest of Grants Pass, Ore. Four campgrounds are located within close proximity of the lake. There is a boat ramp and dock at Lake Selmac County Park (http://www.co.josephine.or.us/Page.asp?NavID=492) on the south shore of the lake. Boats are restricted to a maximum speed of 5 m.p.h.<br> <br>Amenities -- Boat ramp, boat rentals, tent and RV camp sites, yurts, day use picnic areas, fire rings and barbecues, restrooms, vault toilets, trail system, disc golf course, baseball field.<br> <br>Fish species: rainbow trout, bass, crappie, bluegill, brown bullhead <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v6A7Rf2hHXpkXqGepm9P-fVuiAp40Susm030Mfdl1QyKZ_wt-PM9YxzESUO5yIFY8adnZ0L6cGebKo_ziQ3bZsJ9IPwv9LDbwOpsujg5xmQIPWL_4gn-g2fCz-cSMF-8_EL5mgQac55U2L4VACa7foq</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.578113,42.258635,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Little Hyatt Reservoir</name>
+        <description><![CDATA[Species Stocked: rainbow trout<br><br>Description: 7.5 acre surface area reservoir. North part of the reservoir is private property, south part is BLM.<br><br>Amenities: Primitive site, suitable for personal pontoon boat, or bank fishing. <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <Point>
+          <coordinates>
+            -122.485949,42.159474,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lost Creek Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5VKW1CMQVv-_H0cw3NsdFYbpZutHAAn9FGhpkMkQqCrwXlDRY4w2eVMcCcUtramRtJZy0Xm9ZdCOOMXlIUT_F3D2gXjTphk3lpSo15NZMAKmoQiNUYgixRAlmDrmhbjKBaD48Xkg8kY6AM4NHvS5MchqR8LRb1Fz5P" height="200" width="auto" /><br><br>This is a 3,500-acre impoundment on the Rogue River above Shady Cove, Ore. It is deep throughout, reaching a maximum depth of 322 feet. Camping and a boat ramp is available at Stewart State Park (http://www.oregonstateparks.org/park_30.php) on the south shore. A second boat ramp is located next to the dam on the north end of the lake.<br> <br>Fish species: rainbow trout, cutthroat trout, brown trout, spring chinook, largemouth bass, smallmouth bass, bluegill, crappie, pumpkinseed sunfish, brown bullhead<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5VKW1CMQVv-_H0cw3NsdFYbpZutHAAn9FGhpkMkQqCrwXlDRY4w2eVMcCcUtramRtJZy0Xm9ZdCOOMXlIUT_F3D2gXjTphk3lpSo15NZMAKmoQiNUYgixRAlmDrmhbjKBaD48Xkg8kY6AM4NHvS5MchqR8LRb1Fz5P</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.61976,42.684171,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Medco Pond</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v6WctSYWF0-DneTg62WhWvBxXsvpbAmzywvllCqyWHWVJRZsA6i2X16-WNqXClYiXxMoNwDg1s9okbVltVzJIQCOg2lUkuSjp2G63RE5D7NGFUiXpGwVPPbOvqXgxno-unipf72kC0ZFIN75quYhR536w" height="200" width="auto" /><br><br>This a 25-acre pond located between Prospect and Butte Falls northeast of Medford, Oregon. The pond is privately owned by the Swanson Group, an Oregon-based timber company, but is open to the public. The pond is surrounded by pine trees, and behind an earthen dam across the pond is an additional 40 acres of lilly pad water. Amenities are limited, consisting of a couple of port-a-potties and some picnic tables.<br> <br>Fish species: rainbow trout, largemouth bass, bluegill<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v6WctSYWF0-DneTg62WhWvBxXsvpbAmzywvllCqyWHWVJRZsA6i2X16-WNqXClYiXxMoNwDg1s9okbVltVzJIQCOg2lUkuSjp2G63RE5D7NGFUiXpGwVPPbOvqXgxno-unipf72kC0ZFIN75quYhR536w</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.438121,42.655993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Powers Pond</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v637QHMdOUO5OJpQYqZvjSlTfMyGUBqVsFERPQSpsdG1xaTaQs5-6PbISlREniKFBcGimFVxZqcfBJmld-zlU6U2OeJkFK3Ok-Vo4PnskHJMiYv7BAJlgJwFN1Q2pFFQ-rCew8UWzS2zuIZivlvHaE5" height="200" width="auto" /><br><br>This is a 23-acre former mill pond located in Powers Park next to the Coquille River in the southwest Oregon town of Powers. The park has RV facilities, showers and a picnic area.<br> <br>Fish species: rainbow trout, largemouth bass, black crappie, bluegill, brown bullhead.   ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v637QHMdOUO5OJpQYqZvjSlTfMyGUBqVsFERPQSpsdG1xaTaQs5-6PbISlREniKFBcGimFVxZqcfBJmld-zlU6U2OeJkFK3Ok-Vo4PnskHJMiYv7BAJlgJwFN1Q2pFFQ-rCew8UWzS2zuIZivlvHaE5</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.077444,42.892363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Reinhart Pond</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v4qCdgpAb4uKAmMOcRsvUatBZc8_xmSwBKrptXzdqf_59ArqKG-wIkAV5iWYAy4keCy-TElai_LW3xlNPMZOOHrmHgFa0ihIcS5uVbr2pQ7C8z5IjZOKdVB32gqEasHIEEVq7d5fMt26fDEr6wsY5ykkA4" height="200" width="auto" /><br><br>This pond is located within Reinhart Volunteer Park (http://www.grantspassoregon.gov/Index.aspx?page=158) at 1690 SW Webster Rd. in Grants Pass, Ore. Amenities at this riverside park include softball and baseball fields, a soccer field, sand vollehyball courts, flycasting pond, jogging trail, tennis and basketball courts, and shelters available for reservations.<br> <br>Fish species: rainbow trout, largemouth bass, bluegill<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v4qCdgpAb4uKAmMOcRsvUatBZc8_xmSwBKrptXzdqf_59ArqKG-wIkAV5iWYAy4keCy-TElai_LW3xlNPMZOOHrmHgFa0ihIcS5uVbr2pQ7C8z5IjZOKdVB32gqEasHIEEVq7d5fMt26fDEr6wsY5ykkA4</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.348624,42.429562,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rogue River above Lost Creek</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v73w0ttVIDjKTuy9Yfofl7INKEOb6kfVtDE60kBPYuBxba5w7_Pm_-tI78zVDY1dpS4DGsXoOBt2FTLvivnMwZrY_N5hRL_N4gBruNIiiqAxgAT5Bnr6wFoPJ-ngVwuAW-GaGDaTZyXYaJlOCc12NkmR9a84F0nX6dQ_pINfTCJfts" height="200" width="auto" /><br><br>This beautiful section of the Rogue River is stocked with rainbow trout regularly throughout the summer. Much of this section of the river is within the Rogue River-Siskiyou National Forest (http://www.fs.usda.gov/rogue-siskiyou/). A maintained trail follows the entire length of this section of the river, and U.S. Forest Service campgrounds and day-use areas are available<br><br>Fish species: rainbow trout, cutthroat trout, brook trout, brown trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v73w0ttVIDjKTuy9Yfofl7INKEOb6kfVtDE60kBPYuBxba5w7_Pm_-tI78zVDY1dpS4DGsXoOBt2FTLvivnMwZrY_N5hRL_N4gBruNIiiqAxgAT5Bnr6wFoPJ-ngVwuAW-GaGDaTZyXYaJlOCc12NkmR9a84F0nX6dQ_pINfTCJfts</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.461038,42.905394,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saunders Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5Qz2ySEwxFhNt3LcPCQG_ev4ZZcHi_do-Bby1tOt1t08-f4AIVOoMmXrUXJTMqFCJgUB0ubC2AfIS_uWOdG3gQsReP41h5wdpMHUadBILDe5Uipq9k9e5YBMHZVmaiYNupIoI71iffTk2_z6-z1BmZNg" height="200" width="auto" /><br><br>This is a 55-acre lake west of Hwy. 101 about 15 miles south of Reedsport, Ore. There is a county park with a picnic area, boat ramp and bank fishing at the south end of the lake. The rest of the lake shore is residential land and no camping is allowed. However, campgrounds are located north about 3-6 miles at Tenmile and Eel lakes<br> <br>Fish species: rainbow trout, largemouth bass, yellow perch<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5Qz2ySEwxFhNt3LcPCQG_ev4ZZcHi_do-Bby1tOt1t08-f4AIVOoMmXrUXJTMqFCJgUB0ubC2AfIS_uWOdG3gQsReP41h5wdpMHUadBILDe5Uipq9k9e5YBMHZVmaiYNupIoI71iffTk2_z6-z1BmZNg</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.219623,43.534083,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Spalding Pond</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v49lzWi3Vg4RW3-8ox2iuekZl0TVL37XDQ-RhDOKIlPcO2x16QrQrKhk24CkG1BV55F-8bLHqdD6Su_ds7taMEFQTofkv9EJYWVa46oTHTmMi8dVoLBN7dtjQNc23zH_u-XTO59CJLizsW0eC3BGDtnvQ" height="200" width="auto" /><br><br>This is a 3-acre lake located on a historic mill site within the Rogue River-Siskiyou National Forest (http://www.fs.usda.gov/rogue-siskiyou/). It has three ADA accessible fishing platforms and a surfaced accessible trail in a primitive setting appr. 21 miles southwest of Grants Pass, Ore. There is an accessible restroom and small campground (http://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/recarea/?recid=70678). There is a small pebble beach.<br><br>Fish species: rainbow trout, brook trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v49lzWi3Vg4RW3-8ox2iuekZl0TVL37XDQ-RhDOKIlPcO2x16QrQrKhk24CkG1BV55F-8bLHqdD6Su_ds7taMEFQTofkv9EJYWVa46oTHTmMi8dVoLBN7dtjQNc23zH_u-XTO59CJLizsW0eC3BGDtnvQ</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.704,42.346702,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sru Lake</name>
+        <description><![CDATA[This is a small lake located appr. 21 miles southeast of Powers, Ore., on the Rogue-River-Siskiyou National Forest (http://www.fs.usda.gov/main/rogue-siskiyou/home). Camping is available nearby at Sru Campground (http://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/fishing/recarea/?recid=70098&actid=42).<br> <br>Fish species: rainbow trout<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <Point>
+          <coordinates>
+            -124.005883,42.731867,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tenmile Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7aKXH9ucIwQLOiaX3zxhP25cn0pRhB0K-4ChnLRxvDbBnR-hXMnkXKVCilk06soGWUODEBVqCmz3_9Qmi4k8E18KmCx6-um056uLxYXlNPoE4l4PQE2H9-AyFhxsAnBXsrFmlAqUfj7X4XN9q7y3-o9w" height="200" width="auto" /><br><br>Two large lakes on the Oregon coast next to the town of Lakeside in Coos County. The lakes have 170 miles of shoreline, a surface area of 2,723 acres and an average depth of about 15 feet. They have numerous bays, arms and fingers that hold a variety of trout and warmwater fish species. These lakes are considered one of Oregon's premier warmwater fisheries. The lake is located just minutes from the Oregon Dunes National Recreation Area, (http://www.fs.usda.gov/wps/portal/fsinternet/!ut/p/c5/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gDfxMDT8MwRydLA1cj72DTgBAjAwgAykeaxcN4jhYG_h4eYX5hPgYwefy6w0H24dcPNgEHcDTQ9_PIz03VL8iNMMgycVQEAObEnGA!/dl3/d3/L2dJQSEvUUt3QS9ZQnZ3LzZfME80MEkxVkFCOTBFMktTNUJIMjAwMDAwMDA!/?navtype=BROWSEBYSUBJECT&recid=42465&actid=&navid=110000000000000&pnavid=&ss=110612&position=&ttype=recarea&pname=Siuslaw%20National%20Forest%20-%20Oregon%20Dunes%20National%20Recreation%20Area) which has numerous campgrounds, hiking trails, and other recreational amenities.<br> <br>Amenities: county park, two boat ramps, three marinas<br><br>Fish species: rainbow trout, cutthroat trout, largemouth bass, crappie, bluegill, yellow perch, brown bullhead<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7aKXH9ucIwQLOiaX3zxhP25cn0pRhB0K-4ChnLRxvDbBnR-hXMnkXKVCilk06soGWUODEBVqCmz3_9Qmi4k8E18KmCx6-um056uLxYXlNPoE4l4PQE2H9-AyFhxsAnBXsrFmlAqUfj7X4XN9q7y3-o9w</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.16688,43.571934,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Willow Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v43jGH6rLtOD_VSrxAChqse0bchvr7L88KSkIMmdO75Jzn0zYjKa75xRB7kqQEoIKGH4Z7ihB-sk_hPYs3Vwpytikga9fyOOi4AwA6nneOA6Hd2v_NTUEEylD-IWZrBTRUSTU-CI4YRJV0tPGtHuupV" height="200" width="auto" /><br><br>Willow Lake is a popular southern Oregon reservoir which stores the waters of Willow Creek, a tributary of the South Fork of Big Butte Creek. The 52-foot high, earthfill dam was completed in 1952 by the Medford Water Commission to store water as part of their municipal water system. The lake is located at the base of Mt. McLoughlin on land owned by Jackson County. It is located approximately 7.5 miles east of Butte Falls and 43 miles northeast of Medfore, Ore. Jackson County has designated the surrounding 927 acres as a recreational area, which provides a number of amenities, including campsites, RV sites, cabins, picnic area, restrooms, and boat ramp.<br> <br>Amenities: Willow Lake County Park<br> (http://www.co.jackson.or.us/Page.asp?NavID=3514)<br>Fish species: rainbow trout, cutthroat trout, kokanee, largemouth bass, black crappie, brown bullhead<br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v43jGH6rLtOD_VSrxAChqse0bchvr7L88KSkIMmdO75Jzn0zYjKa75xRB7kqQEoIKGH4Z7ihB-sk_hPYs3Vwpytikga9fyOOi4AwA6nneOA6Hd2v_NTUEEylD-IWZrBTRUSTU-CI4YRJV0tPGtHuupV</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.457894,42.469386,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Umpqua Roseburg Office 541-440-3353</name>
+      <Placemark>
+        <name>Ben Irving Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7DVTTtoov1RC8lN5TmKkFit4t02G6OiHmGEiJWbMM0RB6W72AdaTS_JOT2QGwGWdveKmz3YBctiZZeT7J5ptRe9IO8zP8BdIlqDnc-p6Ao7hLV2SCK4HrtlQcrmji5Xf0UgF86AiijFDVx1vjmRyX28Lw" height="200" width="auto" /><br><br>This is a 250-acre lake in Douglas County, Oregon, created by the construction of Berry Creek Dam, which impounds Berry Creek. The reservoir is named for a longtime Oregon outdoorsman and is located in a narrow canyon about 10 miles southwest of Winston, Oregon. Boats are allowed on the reservoir, which is popular for water skiing, butthere is an electric motor only section for angling.<br> <br>Amenities: boat ramp, picnic tables, barbecue, restroom<br> <br>Fish species: rainbow trout, largemouth bass, bluegill, yellow perch, black crappie, brown bullhead<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7DVTTtoov1RC8lN5TmKkFit4t02G6OiHmGEiJWbMM0RB6W72AdaTS_JOT2QGwGWdveKmz3YBctiZZeT7J5ptRe9IO8zP8BdIlqDnc-p6Ao7hLV2SCK4HrtlQcrmji5Xf0UgF86AiijFDVx1vjmRyX28Lw</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.594818,43.05158,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Buckeye Lake</name>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6KHQp4uXnY_SU7nkiOzEBetPX9FCOyYnpVT2tjPI1SB03fFdff4bSuqpxISQtNGulRO-dqnbLrduhnc5_bag-NHD6MEJJhyMtK-Yp2UtsXm3srOlDB8ozNYd_5Wm_uLBxfqUQh5oXmC6cc52bp3fVpzOe_ddEQmytSdvE1f1vFGYfaD7-yb6Eh153SRiFa2wfQN7Q6?fife=s16383" height="200" width="auto" /><br><br>This is a 10-acre hike-in lake located within the Umpqua National Forest (http://www.fs.usda.gov/umpqua/). There are improved campgrounds nearby at Buckeye and Cliff Lake. The lake is annually stocked with fingerling "FishWich" Rainbow Trout.<br> <br>Fish species: rainbow trout, eastern brook trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6KHQp4uXnY_SU7nkiOzEBetPX9FCOyYnpVT2tjPI1SB03fFdff4bSuqpxISQtNGulRO-dqnbLrduhnc5_bag-NHD6MEJJhyMtK-Yp2UtsXm3srOlDB8ozNYd_5Wm_uLBxfqUQh5oXmC6cc52bp3fVpzOe_ddEQmytSdvE1f1vFGYfaD7-yb6Eh153SRiFa2wfQN7Q6?fife=s16383</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.521741,43.06464,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bull Pup Lake - Umpqua</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v6KwHO5-1xRt8xknjH_quA4kFXZ_aZ0a6iedx_0RelOS7ZcmJNQ9R_uTPwHKB_YUuIIp6jzmAGfjUinnmZAjFgWcMuE1yxTETUBVYPSZm3n0xX1IESCeKETlxiYgprPpP7LVGyIVc4U1bQ-AGYwOdP1Zg" height="200" width="auto" /><br><br>This lake is located in the North Umpqua watershed within the Umpqua National Forest (http://www.fs.usda.gov/umpqua) east of Roseburg, Ore. The lake is annually stocked with fingerling "FishWich" Rainbow Trout.<br> <br>Fish species: rainbow trout, brook trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v6KwHO5-1xRt8xknjH_quA4kFXZ_aZ0a6iedx_0RelOS7ZcmJNQ9R_uTPwHKB_YUuIIp6jzmAGfjUinnmZAjFgWcMuE1yxTETUBVYPSZm3n0xX1IESCeKETlxiYgprPpP7LVGyIVc4U1bQ-AGYwOdP1Zg</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.505257,43.432977,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Calamut Lake - Umpqua</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5O0qHTnJxlWVndkLeEq7jABgHsRuIfHTWox7pvtCQQxSRSt6QYr8OQgeeJBge1_ysUDukZNX8ThYdGTwEIjKse907-lSQ5ibsuxgGuCy57JxaSlb_gMFYMz6aAPZMa0FEv1SsJSlmzo6UHhNXMiraeKQ" height="200" width="auto" /><br><br>This is an 18-acre hike-in Lake located within the Umpqua National Forest (http://www.fs.usda.gov/umpqua/). There are a few improved campsites at the lake. The lake is stocked annually with fingerling "FishWich" Rainbow Trout<br> <br>Fish species: eastern brook trout, rainbow trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5O0qHTnJxlWVndkLeEq7jABgHsRuIfHTWox7pvtCQQxSRSt6QYr8OQgeeJBge1_ysUDukZNX8ThYdGTwEIjKse907-lSQ5ibsuxgGuCy57JxaSlb_gMFYMz6aAPZMa0FEv1SsJSlmzo6UHhNXMiraeKQ</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.108188,43.363753,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Clearwater Number Two Forebay - Umpqua</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5B4WVyxEp6lGTeN-TZEnb9ECXSllapCdBtq_b-hEfuhugWhiB-7RRmoua7nUui9D2evYhEopSagLT9hg5jxLOMM18it9f9yvUO_XzSiwrNz6hqiYHOuVubZrDtAKEm94MBR9Ch8m77wsHCgJMJCwfsNk9rJBHbbXI" height="200" width="auto" /><br><br>This is one of two forebays in the area and is the only one that is part of ODFW's trout stocking program.<br> <br>Fish species: rainbow trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5B4WVyxEp6lGTeN-TZEnb9ECXSllapCdBtq_b-hEfuhugWhiB-7RRmoua7nUui9D2evYhEopSagLT9hg5jxLOMM18it9f9yvUO_XzSiwrNz6hqiYHOuVubZrDtAKEm94MBR9Ch8m77wsHCgJMJCwfsNk9rJBHbbXI</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.4045611,43.2624876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cliff Lake - Umpqua</name>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5ICbjA2CqdXw9dprqNewdYOGJsHeODhrQsItAKQq4N4W_8cpl65X7M6TGsdtL0Dh9AAwkGhnR9Zq720ZIQiz6sEuBSahIppsmkk_KrvJJE474OLyZX5Vz7tQ_xijSbKBJCfwYsoU-cnmouP5xAZ13Hv_uzsZs4qnOfIWp530GHaKTP27SzfwgJvVPIPZBIxOq_iLtE?fife=s16383" height="200" width="auto" /><br><br>This is a 7-acre hike-in lake located within the Umpqua National Forest in the Rogue Umpqua Divide Wilderness. (http://www.fs.usda.gov/umpqua). Skimmerhorn Trail 1578 offers the most direct way in. Campsites are nearby at Cliff and Buckeye. The lake is annually stocked with fingerling "FishWhich" Rainbow Trout.<br> <br>Fish species: rainbow trout, eastern brook trout<br><br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5ICbjA2CqdXw9dprqNewdYOGJsHeODhrQsItAKQq4N4W_8cpl65X7M6TGsdtL0Dh9AAwkGhnR9Zq720ZIQiz6sEuBSahIppsmkk_KrvJJE474OLyZX5Vz7tQ_xijSbKBJCfwYsoU-cnmouP5xAZ13Hv_uzsZs4qnOfIWp530GHaKTP27SzfwgJvVPIPZBIxOq_iLtE?fife=s16383</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.516956,43.061661,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Connie Lake - Umpqua</name>
+        <description><![CDATA[This is a small lake in the Umpqua National Forest (http://www.fs.usda.gov/umpqua) that is accessible by 4-wheel-drive.  The lake is annually stocked with fingerling "FishWhich" Rainbow Trout.<br><br>Fish species: brook trout, Rainbow Trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -122.0841412,43.3814198,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cooper Creek Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5YPze2vcWsXJ5M-8S9xmC37fGLYM_VnZAl6YaDjiIrhqhpIbK6_etj48ZyPEw79Dsye7Qq96ey0N9rSp-NdGaoeG3jQd5SggQEufSOzueHxpCn58NnB0E9F9zKGdbXonGo7KvyDAK4TntqU5bZuNWEfQ" height="200" width="auto" /><br><br>This is a 160-acre reservoir located about three miles east of Sutherlin, Oregon in the Umpqua River Basin. Boating is allowed and the reservoir is popular for waterskiing but there are still several fingers good for fishing as well as a speed limit zone near the boat ramp.<br> <br>Amenities: two boat ramps, pavilion, picnic area, restroom, barbecue<br> <br>Fish species: rainbow trout, largemouth bass, bluegill, yellow perch, brown bullhead, black crappie, yellow bullhead<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5YPze2vcWsXJ5M-8S9xmC37fGLYM_VnZAl6YaDjiIrhqhpIbK6_etj48ZyPEw79Dsye7Qq96ey0N9rSp-NdGaoeG3jQd5SggQEufSOzueHxpCn58NnB0E9F9zKGdbXonGo7KvyDAK4TntqU5bZuNWEfQ</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.275185,43.376419,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Diamond Lake</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v4ppKBJQcj3TwtWxwCfxS9zZKevCaVQmFfla3DgKLMIR5YA5I1XnI3Yt2HwcdXOwbpZ3TfpVu4HRBcHZ06zovycwb6ty--5y9kj7H8ngbNTpdZb-9Zvjs0D2LqXFwEBH49fR26Q81krxtk6s0ymihhDlg" height="200" width="auto" /><br><br>Diamond Lake is a 2,824-acre lake within the Umpqua National Forest (http://www.fs.usda.gov/umpqua) in southern Oregon, just north of Crater Lake National Park (http://www.nps.gov/crla/index.htm) in Douglas County. This lake is one of the most popular recreational fisheries in southern Oregon. Fishing is done both from boats and from the bank. There are five paved boat ramps, three U.S. Forest Service campgrounds and a privately owned resort around Diamond Lake.<br> <br>Campgrounds: Diamond Lake Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea?recid=63480), Broken Arrow Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea?recid=63460), Thielson View Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea?recid=63618)<br> <br>Fish species: rainbow trout <br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v4ppKBJQcj3TwtWxwCfxS9zZKevCaVQmFfla3DgKLMIR5YA5I1XnI3Yt2HwcdXOwbpZ3TfpVu4HRBcHZ06zovycwb6ty--5y9kj7H8ngbNTpdZb-9Zvjs0D2LqXFwEBH49fR26Q81krxtk6s0ymihhDlg</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.1375523,43.1745284,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fuller Lake - Umpqua</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v4wsS37PFcx6AQB4z9t73ZnEjnJX2eB-s8EfT1ixu_Vx5FXbiGc9b7iECk6UUu0qLSEFGsjxZg75UEq7iMcFo6us4-1Qw8AMzJ0IhdA7LuUYHFwP6yBrlHxp6oc_OLr9a_V2UjXc2bZWp-DcJGM9wc" height="200" width="auto" /><br><br>This small lake is located within the Umpqua National Forest (http://www.fs.usda.gov/recarea/umpqua/null/recarea/?recid=63696&actid=93) about 47 miles from Glide, Ore. A lakeside shelter is available. The lake is annually stocked with fingerling "FishWich" Rainbow Trout.<br> <br>Fish species: rainbow trout, eastern brook trout<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v4wsS37PFcx6AQB4z9t73ZnEjnJX2eB-s8EfT1ixu_Vx5FXbiGc9b7iECk6UUu0qLSEFGsjxZg75UEq7iMcFo6us4-1Qw8AMzJ0IhdA7LuUYHFwP6yBrlHxp6oc_OLr9a_V2UjXc2bZWp-DcJGM9wc</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.494168,43.401337,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Galesville Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7PaSY3DIUXfI57gibdba2BSNihBfnJ-iTffEMthhNUc1DpsXpDixuDzpN-e7FeNxFqj4jp3KADEDbvZZvgaQ-54MLqLsxqz_GJfZHv3Ok6gct4I8YORU427BicwVZp-yLb00sc9WFIv7X3fclgublzEfJHf5dFejRC" height="200" width="auto" /><br><br>This 630-acre reservoir is open to angling year-round. In addition to trout, the reservoir is sometimes stocked with coho salmon smolts. Many people mistakenly think these fish are kokanee. All of the smolts are adipose fin-clipped. In this reservoir, all landlocked salmon are considered trout and are part of the five-per-day bag limit. This reservoir has a new campground in addition to the picnic area, plus two boat ramps.<br> <br>Fish species: rainbow trout, largemouth bass, bluegill, brown bullhead, black crappie, cutthroat trout<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7PaSY3DIUXfI57gibdba2BSNihBfnJ-iTffEMthhNUc1DpsXpDixuDzpN-e7FeNxFqj4jp3KADEDbvZZvgaQ-54MLqLsxqz_GJfZHv3Ok6gct4I8YORU427BicwVZp-yLb00sc9WFIv7X3fclgublzEfJHf5dFejRC</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.158455,42.849289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hemlock Lake - Umpqua</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v5bjEzf_pTuLAeXr7lySH-gaOdssrE7Au80iUJqdz9LTIkjph7xGiNeTkoMNh_l4H7YMY5329TRKiGf3QR1iYxMP3P5GjVJ21p2xND7qAQtOYKFHOPkEw8kbUMA2_0h-oAShxF558k40TXsZhkPcM2x" height="200" width="auto" /><br><br>This lake is situated in a secluded moutain setting in the Umpqua National Forest (http://www.fs.usda.gov/umpqua) at an elevation of 4,000 feet. The lake is approximately 33 feet deep at its deepest point. There is a boat launch and 13 nearby campsites at Hemlock Meadows Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea/?recid=63708). Boats are stricted to electric motors only.<br><br>Fish species: rainbow trout, kokanee<br><br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v5bjEzf_pTuLAeXr7lySH-gaOdssrE7Au80iUJqdz9LTIkjph7xGiNeTkoMNh_l4H7YMY5329TRKiGf3QR1iYxMP3P5GjVJ21p2xND7qAQtOYKFHOPkEw8kbUMA2_0h-oAShxF558k40TXsZhkPcM2x</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.69807,43.188305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake in the Woods - Umpqua</name>
+        <description><![CDATA[This is a 4-acre lake located in the Umpqua National Forest (http://www.fs.usda.gov/umpqua) east of Roseburg, Ore. Motor boats are not allowed.<br> <br>Fish species: rainbow trout<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -122.7252115,43.2170694,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Marie</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v4KoXnSNaKWO5EU2b7owJueaRKp8FmejdRtfdyVYgg9VEcakr1Nt_riRB_X8JWIwWodEz_tkAhpacmMF3yEDaHX99oaUUIBgxEZGRjAJCwjXGvX6mXktbq9luGIDtGHhSfSnG_8R-WovriUpDvqeuk" height="200" width="auto" /><br><br>This is a 5-acre lake located in the Umpqua Lighthouse State Park (http://www.oregonstateparks.org/park_121.php) near Winchester Bay, Oregon. It has a sandy beach at one end for swimming and day use, and hiking trails around the perimeter. There is no boat ramp, and motor boats are prohibited.<br> <br>Fish species: rainbow trout, largemouth bass, yellow perch<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v4KoXnSNaKWO5EU2b7owJueaRKp8FmejdRtfdyVYgg9VEcakr1Nt_riRB_X8JWIwWodEz_tkAhpacmMF3yEDaHX99oaUUIBgxEZGRjAJCwjXGvX6mXktbq9luGIDtGHhSfSnG_8R-WovriUpDvqeuk</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -124.192865,43.660106,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lemolo Reservoir - Umpqua</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v4bIW8b4OoQ98Ad3tkSRTHhuCqGskAr_vrLO6273vLp1ZJur_VOfRT3y-UspJ2QAlEfC0P8klECL9b4pBIKpyvZMOaboAs5vmciNKmteyJyBel6xIyUkfA_2SCY9mr6f_zgfGlIipupb-YN4SoG_eM" height="200" width="auto" /><br><br>This is a 415-acre reservoir in the North Umpqua River basin. Three boat ramps, four campgrounds and resort are located on the lake. Lemolo Lake Resort (http://www.lemololakeresort.com/) offers gas, food, lodging, bait, tackle, boat rentals and launching. Spectacular views of the High Cascade Mountains can be seen from the lake. In the winter there is cross-country skiing and a wealth of snowmobile trails that lead through sparkling landscapes.<br> <br>Several Forest Service campgrounds are located in close proximity to the reservoir: Bunker Hill Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea?recid=63466), East Lemolo Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea?recid=63492), Inlet Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea?recid=63508), Poole Creek Campground (http://www.fs.usda.gov/recarea/umpqua/recreation/recarea?recid=63570)<br> <br>Fish species: rainbow trout, brown trout, kokanee<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v4bIW8b4OoQ98Ad3tkSRTHhuCqGskAr_vrLO6273vLp1ZJur_VOfRT3y-UspJ2QAlEfC0P8klECL9b4pBIKpyvZMOaboAs5vmciNKmteyJyBel6xIyUkfA_2SCY9mr6f_zgfGlIipupb-YN4SoG_eM</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.1934603,43.3143743,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Linda Lake - Umpqua</name>
+        <description><![CDATA[This lake is located within the Umpqua National Forest (http://www.fs.usda.gov/umpqua/). The trailhead for Calamut Lake begins here. The lake is stocked with fingerling "FishWich" Rainbow Trout.<br> <br>Fish species: rainbow trout, brook trout<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -122.1190702,43.3513845,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Loon Lake</name>
+        <description><![CDATA[This is a 294-acre lake located in Douglas County about 15 miles southeast of Reedsport, Ore. There are two resorts and a BLM campground (http://www.blm.gov/or/resources/recreation/site_info.php?siteid=34) with a boat ramp on the north end of the lake. This lake is two miles long and reaches a maximum debth of 105 feet. Boats are allowed and this lake is popular for water skiing. However, it has a speed limit zone for fishing on the south end. It has both BLM and private resort campgrounds and boat ramps.<br> <br>Fish species: rainbow trout, cutthroat trout, largemouth bass, black crappie, bluegill, brown bullhead<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -123.847075,43.596368,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Maidu Lake</name>
+        <description><![CDATA[This is a 20-acre hike-in lake located approximately 38 miles west of LaPine, Ore., at the head of the North Umpqua River. It is usually accessible by June. It is a 7-mile hike from the Kelsey Valley horse camp side and approximately 3 miles from the Miller Lake side. https://www.fs.usda.gov/recarea/umpqua/recreation/hiking/recarea/?recid=63738&actid=51. The lake is annually stocked with fingerling "FishWich" Rainbow Trout.<br> <br>Fish species: brook trout, Rainbow Trout<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -122.001457,43.257112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Plat I Reservoir</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v7EvgIzRXEEsBzq5eQs0kLapUyUFNWiC1CQQpvIE9-a_5dfYerd6E9VXJV_F_SxZG9RW-KEEmWO2Y087aBtvZg_kjGvtkSSzoAJ3Ukzaeaq3MLOgBxxkEoGTYU6IHcHic_r8z-Bl512bvTfRSYVh4IL" height="200" width="auto" /><br><br>This is a 155-acre reservoir on Sutherlin Creek in Douglas County, Oregon. It is owned by Sutherlin Creek Water Control District and is open to fishing year-round. <br><br>Fish species: rainbow trout, largemouth bass, black crappie, brown bullhead<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v7EvgIzRXEEsBzq5eQs0kLapUyUFNWiC1CQQpvIE9-a_5dfYerd6E9VXJV_F_SxZG9RW-KEEmWO2Y087aBtvZg_kjGvtkSSzoAJ3Ukzaeaq3MLOgBxxkEoGTYU6IHcHic_r8z-Bl512bvTfRSYVh4IL</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -123.252021,43.395779,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Red Top Pond - Umpqua</name>
+        <description><![CDATA[This couple acre pond is situated near the headwaters of Deadman Creek in the Umpqua River basin. Fishing access includes bank, float tube, inflatable pontoon boat, and canoes. There is dispersed camping near the lake. The area around the lake is owned by the Cow Creek Tribe, please be respectful of the land.<br> <br>Fish species: rainbow trout<br><br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br>Trout Stocking Schedule (http://www.dfw.state.or.us/resources/fishing/trout_stocking_schedules/)<br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -122.956093,43.080381,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Skookum Lake - Umpqua</name>
+        <description><![CDATA[This is a 15-acre hike-in lake in the Umpqua River watershed. https://www.fs.usda.gov/recarea/umpqua/recarea/?recid=63600<br>The lake is stocked annually with fingerling "Fishwich" Rainbow Trout.<br> <br> <br>Fish species: brook trout, Rainbow Trout.<br> <br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -122.336884,43.167502,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Twin Lakes - Umpqua</name>
+        <description><![CDATA[<img src="https://lh3.googleusercontent.com/umsh/AN6v0v53Zze5p1iiWqC8aXKm01xpeJlmiF55t45vE6WarjvFiEcyg9NbrqUE03607bRb949PA9a0kyD0pB4AZV0Gj08kzYUkSr78bO4sML36AD20QQpVwDrpZo9TWKKEl5ka_gY7WJ4pujD4OCj9FZgebw" height="200" width="auto" /><br><br>Two lakes located within the Umpqua National Forest (http://www.fs.usda.gov/umpqua) in a secluded mountain setting. The larger of the two is a 12-acre lake, and the other is about half that size. Only the larger lake is stocked with fingerling "FishWich" Rainbow Trout. There is a primitive campground in the area.<br><br>Fish species: brook trout, Rainbow<br> <br><br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value>https://lh3.googleusercontent.com/umsh/AN6v0v53Zze5p1iiWqC8aXKm01xpeJlmiF55t45vE6WarjvFiEcyg9NbrqUE03607bRb949PA9a0kyD0pB4AZV0Gj08kzYUkSr78bO4sML36AD20QQpVwDrpZo9TWKKEl5ka_gY7WJ4pujD4OCj9FZgebw</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.5896232,43.2295472,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wolf Lake - Umpqua</name>
+        <description><![CDATA[This is a small hike-in lake located in the Umpqua National Forest (http://www.fs.usda.gov/umpqua/). It has horse corrals at the trailhead. The lake is stock annually with fingerling "FishWich" Rainbow Trout.<br> <br>Fish species: brook trout, Rainbow Trout<br> <br>ODFW Recreation Report & regulation updates (http://myodfw.com/recreation-report/fishing-report/southwest-zone/)<br><br>Fishing Regulations (http://www.eregulations.com/oregon/fishing/)]]></description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -122.451296,43.149736,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Rogue District wilderness lakes</name>
+      <Placemark>
+        <name>Lost Lk</name>
+        <description><![CDATA[Longitude: -122.55694<br>Latitude: 42.31373<br>Stock Interval: 2<br>AccessDirections: Hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Rainbow Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.55694</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.31373</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Rainbow Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.55694,42.31373,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carey Lk</name>
+        <description><![CDATA[Longitude: -122.25714<br>Latitude: 42.51175<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.25714</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.51175</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.25714,42.51175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pear Lk</name>
+        <description><![CDATA[Longitude: -122.26595<br>Latitude: 42.51237<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.26595</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.51237</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.26595,42.51237,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Horseshoe Lk</name>
+        <description><![CDATA[Longitude: -122.27363<br>Latitude: 42.50818<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.27363</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.50818</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.27363,42.50818,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Blue Canyon Lk</name>
+        <description><![CDATA[Longitude: -122.28494<br>Latitude: 42.50434<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.28494</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.50434</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.28494,42.50434,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>South Blue Lk</name>
+        <description><![CDATA[Longitude: -122.28033<br>Latitude: 42.51651<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.28033</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.51651</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.28033,42.51651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Beal Lk</name>
+        <description><![CDATA[Longitude: -122.27525<br>Latitude: 42.52407<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.27525</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.52407</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.27525,42.52407,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Round Lk</name>
+        <description><![CDATA[Longitude: -122.29169<br>Latitude: 42.52679<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.29169</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.52679</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.29169,42.52679,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>McKee Lk</name>
+        <description><![CDATA[Longitude: -122.29851<br>Latitude: 42.55057<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.29851</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.55057</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.29851,42.55057,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Alta Lk</name>
+        <description><![CDATA[Longitude: -122.23361<br>Latitude: 42.65873<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.23361</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.65873</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.23361,42.65873,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cliff Lk</name>
+        <description><![CDATA[Longitude: -122.21886<br>Latitude: 42.65191<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.21886</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.65191</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.21886,42.65191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Middle Lk</name>
+        <description><![CDATA[Longitude: -122.22127<br>Latitude: 42.65712<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.22127</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.65712</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.22127,42.65712,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grass Lk</name>
+        <description><![CDATA[Longitude: -122.21625<br>Latitude: 42.66192<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.21625</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.66192</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.21625,42.66192,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ivern Lk</name>
+        <description><![CDATA[Longitude: -122.22914<br>Latitude: 42.67751<br>Stock Interval: 2<br>AccessDirections: Sky Lakes Wilderness Area hike in access only<br>MaximumDepth: <br>Year Stocked: 2023<br>Species: Brook Trout]]></description>
+        <styleUrl>#icon-53</styleUrl>
+        <ExtendedData>
+          <Data name="Longitude">
+            <value>-122.22914</value>
+          </Data>
+          <Data name="Latitude">
+            <value>42.67751</value>
+          </Data>
+          <Data name="Stock Interval">
+            <value>2.0</value>
+          </Data>
+          <Data name="AccessDirections">
+            <value>Sky Lakes Wilderness Area hike in access only</value>
+          </Data>
+          <Data name="MaximumDepth">
+            <value/>
+          </Data>
+          <Data name="Year Stocked">
+            <value>2023.0</value>
+          </Data>
+          <Data name="Species">
+            <value>Brook Trout</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -122.22914,42.67751,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
