@@ -2849,27 +2849,27 @@
         <Placemark id="933">
             <name>Deer 1 Lake</name>
             <description>
-                <p>Elevation: 3525ft</p>
-                <p>County: Clallam</p>
-                <p>Size: 8.50 Acres</p>
-                <p>Species: Brook trout</p>
-                <a target="_blank" href="https://wdfw.wa.gov/fishing/locations/high-lakes/deer-1-clallam">WDFW Page</a>
-            </description>
-            <Point id="932">
-                <coordinates>-123.823782,47.926653,0.0</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark id="935">
-            <name>Deer 1 Lake</name>
-            <description>
                 <p>Elevation: 4580ft</p>
                 <p>County: Kittitas</p>
                 <p>Size: 2.70 Acres</p>
                 <p>Species: Rainbow trout</p>
                 <a target="_blank" href="https://wdfw.wa.gov/fishing/locations/high-lakes/deer-1-kittitas">WDFW Page</a>
             </description>
-            <Point id="934">
+            <Point id="932">
                 <coordinates>-121.141355,47.534655,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="935">
+            <name>Deer 1 Lake</name>
+            <description>
+                <p>Elevation: 3525ft</p>
+                <p>County: Clallam</p>
+                <p>Size: 8.50 Acres</p>
+                <p>Species: Brook trout</p>
+                <a target="_blank" href="https://wdfw.wa.gov/fishing/locations/high-lakes/deer-1-clallam">WDFW Page</a>
+            </description>
+            <Point id="934">
+                <coordinates>-123.823782,47.926653,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="937">
@@ -3628,14 +3628,14 @@
         <Placemark id="1053">
             <name>Elk Lake (Skamania County)</name>
             <description>
-                <p>Elevation: 4689ft</p>
+                <p>Elevation: 3973ft</p>
                 <p>County: Skamania</p>
-                <p>Size: 12.50 Acres</p>
-                <p>Species: Cutthroat trout</p>
-                <a target="_blank" href="https://wdfw.wa.gov/fishing/locations/high-lakes/elk-skamania-1">WDFW Page</a>
+                <p>Size: 27.30 Acres</p>
+                <p>Species: Brown trout, Cutthroat trout</p>
+                <a target="_blank" href="https://wdfw.wa.gov/fishing/locations/high-lakes/elk-skamania">WDFW Page</a>
             </description>
             <Point id="1052">
-                <coordinates>-121.795763,46.021834,0.0</coordinates>
+                <coordinates>-122.235863,46.335203,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="1055">
