@@ -26,6 +26,8 @@ import json
 import os
 import re
 
+import requests
+
 # Repo root is the parent of the scrapers/ package directory.
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(REPO_ROOT, "data")
@@ -66,6 +68,79 @@ def write_jsonl(path, records):
     with open(path, "w", encoding="utf-8") as f:
         for record in records:
             f.write(json.dumps(record) + "\n")
+
+
+def fetch_arcgis(layer_url, where="1=1", out_fields="*", limit=None,
+                 page_size=1000, timeout=60):
+    """Page through an ArcGIS REST FeatureServer/MapServer layer.
+
+    Returns a list of GeoJSON-style features (``{"properties": {...},
+    "geometry": {...}}``). Many state fish & wildlife agencies publish their
+    data as ArcGIS services, so this is the workhorse for those states.
+
+    ``limit`` caps the number of features fetched (used for smoke runs).
+    """
+    query_url = layer_url.rstrip("/") + "/query"
+    features = []
+    offset = 0
+    while True:
+        params = {
+            "where": where,
+            "outFields": out_fields,
+            "f": "geojson",
+            "returnGeometry": "true",
+            "resultOffset": offset,
+            "resultRecordCount": page_size,
+        }
+        r = requests.get(query_url, params=params, timeout=timeout)
+        data = r.json()
+        batch = data.get("features", [])
+        if not batch:
+            break
+        features.extend(batch)
+        if limit is not None and len(features) >= limit:
+            return features[:limit]
+        if len(batch) < page_size:
+            break
+        offset += len(batch)
+    return features
+
+
+def geometry_centroid(geometry):
+    """Return (lat, lon) for a GeoJSON geometry, or (None, None).
+
+    Handles Point directly and averages the vertices of Polygon/LineString
+    (and their Multi* variants) as a cheap centroid -- good enough to place a
+    marker for a lake polygon.
+    """
+    if not geometry:
+        return None, None
+    gtype = geometry.get("type")
+    coords = geometry.get("coordinates")
+    if coords is None:
+        return None, None
+
+    pts = []
+
+    def collect(c):
+        # A coordinate pair is [lon, lat]; anything else is a nested list.
+        if (isinstance(c, (list, tuple)) and len(c) >= 2
+                and all(isinstance(x, (int, float)) for x in c[:2])):
+            pts.append((c[0], c[1]))
+        elif isinstance(c, (list, tuple)):
+            for sub in c:
+                collect(sub)
+
+    if gtype == "Point":
+        collect(coords)
+    else:
+        collect(coords)
+
+    if not pts:
+        return None, None
+    lon = sum(p[0] for p in pts) / len(pts)
+    lat = sum(p[1] for p in pts) / len(pts)
+    return lat, lon
 
 
 def normalize_species(species_list):
