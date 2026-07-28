@@ -131,7 +131,9 @@ var addLakesToMap = function(lakes) {
     
     if (lk['lat'] && lk['lon']) {
         var m = L.marker([lk['lat'], lk['lon']], {icon: defaultIcon});
-        m.bindPopup(lake2marker_html(lk));
+        // Lazy popup: build the HTML only when the marker is actually opened,
+        // instead of eagerly for all ~55k markers at load.
+        m.bindPopup(function() { return lake2marker_html(lk); });
         
         m.lake = lk;
         lk.marker = m;
