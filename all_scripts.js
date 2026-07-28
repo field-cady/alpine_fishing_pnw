@@ -1,6 +1,7 @@
 var mymap = null;
-var markerCluster = null;
-var markers = [];
+var markerLayer = null;   // holds only the currently-visible cluster/point markers
+var superIndex = null;    // supercluster spatial index over the filtered points
+var allLakes = [];        // every lake that has coordinates
 
 // Default icon for Leaflet
 var defaultIcon = new L.Icon({
@@ -22,11 +23,9 @@ var initializeMap = function() {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
   }).addTo(mymap);
   
-  markerCluster = L.markerClusterGroup({
-    chunkedLoading: true,
-    maxClusterRadius: 50
-  });
-  mymap.addLayer(markerCluster);
+  markerLayer = L.layerGroup().addTo(mymap);
+  // Re-render only the markers in view whenever the map moves/zooms.
+  mymap.on('moveend', renderClusters);
 }
 
 var downloadDataAndRender = function(url) {
@@ -58,8 +57,10 @@ var renderData = function(dat) {
   if (dat["timestamp"]) {
     showTimestamp(dat["timestamp"]);
   }
-  addLakesToMap(dat["lakes"]);
-  populateSpeciesFilter(dat["lakes"]);
+  allLakes = (dat["lakes"] || []).filter(function(lk) {
+    return lk.lat != null && lk.lon != null;
+  });
+  populateSpeciesFilter(allLakes);
   updateMarkers();
   hideLoading();
 }
@@ -136,19 +137,49 @@ var populateSpeciesFilter = function(lakes) {
   }
 }
 
-var addLakesToMap = function(lakes) {
-  for (var i=0; i<lakes.length; i++) {
-    var lk = lakes[i];
-    
-    if (lk['lat'] && lk['lon']) {
-        var m = L.marker([lk['lat'], lk['lon']], {icon: defaultIcon});
-        // Lazy popup: build the HTML only when the marker is actually opened,
-        // instead of eagerly for all ~55k markers at load.
-        m.bindPopup(function() { return lake2marker_html(lk); });
-        
-        m.lake = lk;
-        lk.marker = m;
-        markers.push(m);
+var featureFor = function(lk) {
+  return { type: 'Feature', properties: lk,
+           geometry: { type: 'Point', coordinates: [lk.lon, lk.lat] } };
+};
+
+var clusterIcon = function(count) {
+  var size = count < 100 ? 34 : (count < 1000 ? 42 : 52);
+  var label = count < 1000 ? count : (Math.round(count / 100) / 10) + 'k';
+  return L.divIcon({
+    html: '<div class="cluster-icon"><span>' + label + '</span></div>',
+    className: '', iconSize: [size, size]
+  });
+};
+
+// Render only the clusters/markers within the current viewport + zoom.
+// Supercluster returns a few hundred features at most, so this stays fast
+// no matter how many total lakes there are.
+var renderClusters = function() {
+  if (!superIndex || !markerLayer) return;
+  var b = mymap.getBounds();
+  var bbox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
+  var clusters = superIndex.getClusters(bbox, Math.round(mymap.getZoom()));
+  markerLayer.clearLayers();
+
+  for (var i = 0; i < clusters.length; i++) {
+    var c = clusters[i];
+    var lat = c.geometry.coordinates[1], lon = c.geometry.coordinates[0];
+
+    if (c.properties.cluster) {
+      (function(cid, clat, clon, count) {
+        var m = L.marker([clat, clon], { icon: clusterIcon(count) });
+        m.on('click', function() {
+          var z = superIndex.getClusterExpansionZoom(cid);
+          mymap.setView([clat, clon], Math.min(z, 16));
+        });
+        markerLayer.addLayer(m);
+      })(c.properties.cluster_id, lat, lon, c.properties.point_count);
+    } else {
+      (function(lk, plat, plon) {
+        var m = L.marker([plat, plon], { icon: defaultIcon });
+        m.bindPopup(function() { return lake2marker_html(lk); });  // built on open
+        markerLayer.addLayer(m);
+      })(c.properties, lat, lon);
     }
   }
 }
@@ -244,21 +275,17 @@ var getFilterFunction = function() {
   }
 }
 
+// Rebuild the supercluster index from the filtered lakes, then re-render the
+// current view. Called on initial load and whenever a filter changes.
 var updateMarkers = function() {
   updateSpeciesToggleLabel();
   var filter_func = getFilterFunction();
-  var validMarkers = [];
-  
-  for (var i=0; i<markers.length; i++) {
-    var m = markers[i];
-    var lk = m.lake;
-    if (filter_func(lk)) {
-      validMarkers.push(m);
-    }
+  var features = [];
+  for (var i = 0; i < allLakes.length; i++) {
+    if (filter_func(allLakes[i])) features.push(featureFor(allLakes[i]));
   }
-  
-  markerCluster.clearLayers();
-  markerCluster.addLayers(validMarkers);
+  superIndex = new Supercluster({ radius: 60, maxZoom: 16 }).load(features);
+  renderClusters();
 }
 
 var showTimestamp = function(timestamp) {
