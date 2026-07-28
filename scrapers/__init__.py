@@ -17,6 +17,7 @@ from . import (
     washington, oregon, idaho, california, montana, wyoming, colorado, utah, nevada,
     new_mexico, texas, minnesota, wisconsin, michigan, new_york, pennsylvania, georgia,
     illinois, indiana, kentucky, missouri, ohio, tennessee, virginia, alabama, arkansas,
+    florida,
 )
 
 # The ordered registry of state scrapers. All states are treated equally; the
@@ -25,11 +26,12 @@ SCRAPERS = [
     washington, oregon, idaho, california, montana, wyoming, colorado, utah, nevada,
     new_mexico, texas, minnesota, wisconsin, michigan, new_york, pennsylvania, georgia,
     illinois, indiana, kentucky, missouri, ohio, tennessee, virginia, alabama, arkansas,
+    florida,
 ]
 
 __all__ = [
     "SCRAPERS", "washington", "oregon", "idaho", "california", "montana", "wyoming",
     "colorado", "utah", "nevada", "new_mexico", "texas", "minnesota", "wisconsin",
     "michigan", "new_york", "pennsylvania", "georgia", "illinois", "indiana", "kentucky",
-    "missouri", "ohio", "tennessee", "virginia", "alabama", "arkansas",
+    "missouri", "ohio", "tennessee", "virginia", "alabama", "arkansas", "florida",
 ]
