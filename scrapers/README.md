@@ -38,7 +38,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Michigan | mi | Michigan DNR IFR Lake Deep Points (ArcGIS) | API | Inland lakes with county + coordinates; no species/area/elevation. Great Lakes excluded. |
 | New York | ny | NYSDEC Recommended Fishing Lakes & Ponds (data.ny.gov Socrata) | API | Curated ~320 waters with species, county, acreage, coordinates. Not exhaustive. |
 | Pennsylvania | pa | PFBC lakes via PASDA (ArcGIS layer 19) | API | 465 PFBC-database lakes with county + acreage; species on companion trout layers (not joined); no elevation. |
-
 | Georgia | ga | GADNR WRD Waterbodies (ArcGIS) | API | 110 named lakes/reservoirs with area; no species/county/elevation. |
 | Illinois | il | IDNR Lake Depth & Capacity (ArcGIS) | API | Only ~43 bathymetry-surveyed lakes reliably queryable (full public-waters layer times out); area + normal-pool elevation; no species/county. |
 | Indiana | in | IDNR Fish Access sites (ArcGIS, IndianaMap) | API | Access sites deduped per waterbody; free-text species + county present; no area/elevation. |
@@ -47,6 +46,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Ohio | oh | ODNR DOW Lakes bathymetry (ArcGIS) | API | 321 major lakes with acreage (polygon centroids); no species/county/elevation. |
 | Tennessee | tn | TWRA Boating & Fishing Access Sites (ArcGIS) | API | Access sites deduped per water body; county present; no species/area/elevation. |
 | Virginia | va | Virginia DWR Public Fishing Lakes (ArcGIS) | API | 193 DWR-managed lakes with precomputed centroids; no species/county/elevation. |
+
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
