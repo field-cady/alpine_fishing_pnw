@@ -58,6 +58,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Louisiana | la | LDWF Inland Waterbodies (ArcGIS) | API | Named lakes/reservoirs with popular species (free text) + parsed acreage; polygon centroids; no parish/elevation. |
 | Nebraska | ne | NGPC Public Fishing Spots (ArcGIS) | API | Precomputed centroids, county, species (comma list) and acreage. |
 | North Dakota | nd | NDGF Fishing Waters (ArcGIS) | API | Rich: full species names, county, acreage and current elevation. |
+| South Dakota | sd | SDGFP Urban Community Fisheries (ArcGIS) | API | Only the urban/community subset (~76); species, county, acreage, outlet elevation. No statewide public API. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
