@@ -1,72 +1,105 @@
-"""California state scraper (CDFW).
+"""California state scraper (CDFW Fishing Guide).
 
-Source: CDFW "Planting Location" open dataset (ds2897), served as an ArcGIS
-REST FeatureServer. Each feature is a fish-planting event with a water name,
-fish type, county and coordinates. We aggregate events per water body into one
-record, collecting the set of fish types stocked there.
+Source: CDFW "Fishing Locations" (BIOS ds2880), the layer behind CDFW's public
+Fishing Guide app. It carries real per-water species PRESENCE FLAGS (bass,
+striped bass, salmon, inland salmon/kokanee, sturgeon, panfish, steelhead,
+catfish, and per-species trout) plus name, county, coordinates, elevation and
+acreage -- far broader than the old trout/catfish-only planting feed (ds2897).
 
-Layer: https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/biosds2897_fmu/FeatureServer/0
-Portal: https://data.ca.gov/dataset/planting-location-cdfw-ds2897
+The layer is token-gated, so it is queried through CDFW's own public proxy
+(apps.wildlife.ca.gov/fishing/proxy.ashx) exactly as the web app does. That
+proxy is undocumented and could change; if it starts returning an error the
+scraper yields nothing and last month's data is kept.
+
+Layer: https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/biosds2880_fms/FeatureServer/0
 """
 
-from .base import make_record, fetch_arcgis
+import re
+
+import requests
+
+from .base import make_record
 
 STATE_NAME = "California"
 STATE_CODE = "ca"
 
-_LAYER = "https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/biosds2897_fmu/FeatureServer/0"
-_PORTAL_URL = "https://nrm.dfg.ca.gov/FishPlants/"
+_LAYER = "https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/biosds2880_fms/FeatureServer/0"
+_PROXY = "https://apps.wildlife.ca.gov/fishing/proxy.ashx?"
+_HEADERS = {"Referer": "https://apps.wildlife.ca.gov/fishing/"}
+_URL = "https://apps.wildlife.ca.gov/fishing/"
+
+# Presence-flag column -> species label. (Categories are coarse: kokanee is
+# CDFW's "InlandSalmon"; bass species are rolled into "Bass".)
+_FLAG_SPECIES = {
+    "Bass": "Bass", "StripedBass": "Striped Bass", "AdSalmon": "Salmon",
+    "InlandSalmon": "Kokanee", "Sturgeon": "Sturgeon", "Panfish": "Panfish",
+    "Shad": "American Shad", "Steelhead": "Steelhead", "Catfish": "Catfish",
+    "bcBrookTrout": "Brook Trout", "bcBrownTrout": "Brown Trout",
+    "bcGoldenTrout": "Golden Trout", "bcRainbowTrout": "Rainbow Trout",
+    "bcLahontanCutthroatTrout": "Lahontan Cutthroat Trout", "bcTrout": "Trout",
+    "TroutHatchery": "Trout", "TroutWild": "Trout", "TroutWH": "Trout",
+}
+
+
+def _fetch(limit=None):
+    features, offset, page = [], 0, 2000
+    while True:
+        target = (f"{_LAYER}/query?where=1=1&outFields=*&returnGeometry=false"
+                  f"&f=json&resultOffset={offset}&resultRecordCount={page}")
+        r = requests.get(_PROXY + target, headers=_HEADERS, timeout=60)
+        try:
+            data = r.json()
+        except ValueError:
+            print("[CA] proxy returned non-JSON; aborting CA fetch")
+            break
+        if "error" in data:
+            print(f"[CA] proxy error: {data['error']}; aborting CA fetch")
+            break
+        batch = data.get("features", [])
+        if not batch:
+            break
+        features.extend(batch)
+        if limit is not None and len(features) >= limit:
+            return features[:limit]
+        if len(batch) < page:
+            break
+        offset += len(batch)
+    return features
+
+
+def _parse_elevation(val):
+    if not val:
+        return None
+    m = re.search(r"[\d,]+", str(val))
+    return float(m.group(0).replace(",", "")) if m else None
 
 
 def scrape(limit=None):
-    """Scrape CDFW planting locations and return one record per water body."""
-    print("[CA] Fetching CDFW planting locations (ds2897)...")
-    features = fetch_arcgis(_LAYER, limit=limit)
-    print(f"[CA] {len(features)} planting events; aggregating by water...")
-
-    # Group planting events into one record per water body.
-    waters = {}
-    for feat in features:
-        p = feat.get("properties", {})
-        lat, lon = p.get("Lat"), p.get("Lon")
-        if lat is None or lon is None:
-            continue
-        name = (p.get("WaterName") or "").strip()
-        if not name:
-            continue
-        key = p.get("DfwWaterId") or name
-
-        w = waters.get(key)
-        if w is None:
-            w = waters[key] = {
-                "name": name,
-                "lat": lat,
-                "lon": lon,
-                "county": p.get("Counties"),
-                "species": set(),
-                "last_plant": None,
-            }
-        fish = (p.get("FishType") or "").strip()
-        if fish:
-            w["species"].add(fish)
-        week = p.get("WeekOfPlantStart")
-        if week and (w["last_plant"] is None or week > w["last_plant"]):
-            w["last_plant"] = week
+    print("[CA] Fetching CDFW Fishing Guide locations (ds2880 via proxy)...")
+    features = _fetch(limit=limit)
+    print(f"[CA] {len(features)} fishing locations.")
 
     records = []
-    for w in waters.values():
-        description = f"Last stocked: {w['last_plant']}" if w["last_plant"] else ""
+    for feat in features:
+        a = feat.get("attributes", {})
+        name = (a.get("NAME") or "").strip()
+        lat, lon = a.get("Latitude"), a.get("Longitude")
+        if not name or lat is None or lon is None:
+            continue
+        reach = (a.get("AcresReach") or "").strip()
+        if "mile" in reach.lower():
+            continue  # river/stream reach, not a lake
+
+        species = [label for col, label in _FLAG_SPECIES.items()
+                   if str(a.get(col)).strip() in ("1", "1.0")]
         records.append(make_record(
-            name=w["name"],
-            state=STATE_NAME,
-            lat=w["lat"],
-            lon=w["lon"],
-            county=w["county"],
-            species=sorted(w["species"]),
-            url=_PORTAL_URL,
-            description=description,
+            name=name, state=STATE_NAME, lat=lat, lon=lon,
+            county=a.get("County"),
+            elevation=_parse_elevation(a.get("Elevation")),
+            area=reach if "acre" in reach.lower() else "Unknown",
+            species=species, url=_URL,
         ))
 
     records.sort(key=lambda r: r["name"])
-    print(f"[CA] Collected {len(records)} distinct waters.")
+    print(f"[CA] Collected {len(records)} lakes/reservoirs.")
     return records
