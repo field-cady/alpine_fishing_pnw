@@ -39,9 +39,19 @@ var downloadDataAndRender = function(url) {
         renderData(data);
       } else {
         console.error("Failed to load data from " + url);
+        hideLoading();
       }
     };
+    xhr.onerror = function() {
+      console.error("Error loading data from " + url);
+      hideLoading();
+    };
     xhr.send();
+};
+
+var hideLoading = function() {
+  var overlay = document.getElementById('loading-overlay');
+  if (overlay) overlay.classList.add('hidden');
 };
 
 var renderData = function(dat) {
@@ -51,6 +61,7 @@ var renderData = function(dat) {
   addLakesToMap(dat["lakes"]);
   populateSpeciesFilter(dat["lakes"]);
   updateMarkers();
+  hideLoading();
 }
 
 // --- Species -> filter category mapping (FRONTEND ONLY; not stored in data) ---
