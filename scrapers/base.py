@@ -38,6 +38,20 @@ def data_path(*parts):
     return os.path.join(DATA_DIR, *parts)
 
 
+# Coarse continental-US bounding box for a coordinate sanity check
+# (lat_min, lat_max, lon_min, lon_max). Catches null-island (0,0) and
+# unprojected coordinates that occasionally leak from a source.
+US_BOUNDS = (24.0, 49.5, -125.0, -66.5)
+
+
+def in_conus(lat, lon):
+    """True if (lat, lon) plausibly falls within the continental US."""
+    if lat is None or lon is None:
+        return False
+    la0, la1, lo0, lo1 = US_BOUNDS
+    return la0 <= lat <= la1 and lo0 <= lon <= lo1
+
+
 def make_record(name, state, lat=None, lon=None, elevation=None, area=None,
                 county=None, species=None, url="", description="", **extra):
     """Build a lake record in the common schema.

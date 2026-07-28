@@ -18,7 +18,7 @@ import sys
 import traceback
 
 from scrapers import SCRAPERS
-from scrapers.base import data_path, write_jsonl
+from scrapers.base import data_path, write_jsonl, in_conus
 
 SMOKE_LIMIT = 1
 
@@ -32,8 +32,13 @@ def run(limit=None, only=None):
         out_path = data_path(f"state_lakes_{scraper.STATE_CODE}.jsonl")
         try:
             records = scraper.scrape(limit=limit)
-            write_jsonl(out_path, records)
-            print(f"[{scraper.STATE_CODE.upper()}] Wrote {len(records)} lakes -> {out_path}\n")
+            # Coordinate sanity: drop null-island / unprojected outliers.
+            kept = [r for r in records if in_conus(r.get("lat"), r.get("lon"))]
+            dropped = len(records) - len(kept)
+            if dropped:
+                print(f"[{scraper.STATE_CODE.upper()}] dropped {dropped} out-of-US coords")
+            write_jsonl(out_path, kept)
+            print(f"[{scraper.STATE_CODE.upper()}] Wrote {len(kept)} lakes -> {out_path}\n")
         except Exception:
             print(f"[{scraper.STATE_CODE.upper()}] FAILED:\n{traceback.format_exc()}")
             failures.append(scraper.STATE_CODE)
