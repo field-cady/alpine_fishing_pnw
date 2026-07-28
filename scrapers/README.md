@@ -32,23 +32,23 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Utah | ut | UDWR Fish Stocking Events ArcGIS FeatureServer (lakes layer + species table) | API | Lakes only; species joined from related stocking table by water id; no county/elevation/area. |
 | Nevada | nv | NDOW Fishable Waters ArcGIS FeatureServer (lakes layer) | API | Lakes/reservoirs only; species decoded from FISH1..FISH11 abbreviation codes (a few uncommon codes may pass through unmapped); county present; no elevation/area. |
 | New Mexico | nm | NMDGF Fishing Waters Map (ArcGIS layer 5) | API | Standing waters only (streams dropped), deduped to one per waterbody; species are numeric codes with no public lookup, so omitted; no county/elevation/area. |
-| Texas | tx | TWDB Texas Reservoirs (ArcGIS) | API | Reservoir names + polygon centroids only; no species/county/elevation (TPWD stocking is HTML-only). |
-| Minnesota | mn | MN DNR surveyed lakes (ArcGIS, MN Geospatial Commons) | API | Name, county, acreage for 4,383 lakes; per-lake species available via DNR LakeFinder API (4k+ calls) — deferred, species empty for now. |
-| Wisconsin | wi | WDNR 24k Hydro Waterbodies (ArcGIS) | API | Named lakes (HYDROTYPE 706), centroid + acreage; species on per-WBIC pages (not fetched); no county/elevation. |
-| Michigan | mi | Michigan DNR IFR Lake Deep Points (ArcGIS) | API | Inland lakes with county + coordinates; no species/area/elevation. Great Lakes excluded. |
+| Texas | tx | TWDB Texas Reservoirs (ArcGIS) + TPWD lake pages (species) | API + HTML | Reservoir names/centroids; species scraped from TPWD "predominant fish species" pages, joined by name (~133/211 matched). |
+| Minnesota | mn | MN DNR surveyed lakes (ArcGIS) + DNR LakeFinder API (species) | API | Name, county, acreage; per-lake species enriched from LakeFinder by DOW id. |
+| Wisconsin | wi | WDNR 24k Hydro Waterbodies (ArcGIS) + WDNR stocking API (species) | API | Named lakes + acreage; species from the stocking API joined by name — **stocked species only** (no naturally-reproducing bass/panfish). |
+| Michigan | mi | MI DNR IFR Lake Deep Points + DNR Fish Atlas (species) | API | Inland lakes with county + coords; species attached from Fish Atlas by a coordinate grid (best-effort; ~40% of lakes matched). |
 | New York | ny | NYSDEC Recommended Fishing Lakes & Ponds (data.ny.gov Socrata) | API | Curated ~320 waters with species, county, acreage, coordinates. Not exhaustive. |
 | Pennsylvania | pa | PFBC lakes via PASDA (ArcGIS layer 19) | API | 465 PFBC-database lakes with county + acreage; species on companion trout layers (not joined); no elevation. |
 | Georgia | ga | GADNR WRD Waterbodies (ArcGIS) | API | 110 named lakes/reservoirs with area; no species/county/elevation. |
 | Illinois | il | IDNR Lake Depth & Capacity (ArcGIS) | API | Only ~43 bathymetry-surveyed lakes reliably queryable (full public-waters layer times out); area + normal-pool elevation; no species/county. |
 | Indiana | in | IDNR Fish Access sites (ArcGIS, IndianaMap) | API | Access sites deduped per waterbody; free-text species + county present; no area/elevation. |
 | Kentucky | ky | KDFWR Fishing Access Sites (ArcGIS) | API | 125 waterbodies (access sites deduped); no species/county/area (only on HTML detail pages). |
-| Missouri | mo | MDC Fishing Interactive Map (ArcGIS) | API | MDC-managed waters with acreage; no species/county/elevation. |
+| Missouri | mo | MDC Fishing Interactive Map (ArcGIS) | API | MDC-managed waters with acreage; **no per-lake species source** (MDC exposes species only in JS report pages), so species are omitted. |
 | Ohio | oh | ODNR DOW Lakes bathymetry (ArcGIS) | API | 321 major lakes with acreage (polygon centroids); no species/county/elevation. |
 | Tennessee | tn | TWRA Boating & Fishing Access Sites (ArcGIS) | API | Access sites deduped per water body; county present; no species/area/elevation. |
 | Virginia | va | Virginia DWR Public Fishing Lakes (ArcGIS) | API | 193 DWR-managed lakes with precomputed centroids; no species/county/elevation. |
 | Alabama | al | ADCNR Public Fishing Lakes (ArcGIS) | API | Only 20 state public fishing lakes; no species/county/area/elevation. |
 | Arkansas | ar | AGFC WaterBodyList (ArcGIS) | API | Lake-like waters (filtered by ftype), polygon centroids + acreage; county is a numeric code (omitted); no species/elevation. |
-| Florida | fl | FWC LAKES_POINTS (ArcGIS) | API | 3,859 named lakes with county (label points); no species/area/elevation. |
+| Florida | fl | FWC LAKES_POINTS (ArcGIS) + FWC county Fish Ranges (species) | API | Named lakes with county; species are **county-level** fish ranges (FWC has no per-lake survey), so all lakes in a county share the list. |
 | Iowa | ia | Iowa DNR fishing reports (ArcGIS) | API | Fishing-report waterbodies, name + coords only; species on per-code report pages; no county/area/elevation. |
 | Kansas | ks | KDWP Fishing Atlas (ArcGIS) | API | Reservoirs / state fishing lakes / community lakes with acreage; no species/county/elevation. |
 | North Carolina | nc | NCWRC Public Fishing Areas (ArcGIS, NC OneMap) | API | Lentic waters (LAKE/POND) deduped; county present; no species/area/elevation. |
