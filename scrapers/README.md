@@ -62,6 +62,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Maine | me | Maine GIS PublicMasterWaters (ArcGIS) | API | 5,781 lentic waters with acreage; no species/county/elevation (species live in MDIFW surveys, not fetched). |
 | Vermont | vt | Vermont ANR Fishing Access Areas (ArcGIS) | API | Access-area points with species (presence flags), county and acreage; no elevation. |
 
+| Connecticut | ct | CT DEEP Stocked Lakes (ArcGIS) | API | 111 trout-stocked lakes (species = Trout); county present; centroids; no area/elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
