@@ -36,4 +36,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 
 | Texas | tx | TWDB Texas Reservoirs (ArcGIS) | API | Reservoir names + polygon centroids only; no species/county/elevation (TPWD stocking is HTML-only). |
 
+| Minnesota | mn | MN DNR surveyed lakes (ArcGIS, MN Geospatial Commons) | API | Name, county, acreage for 4,383 lakes; per-lake species available via DNR LakeFinder API (4k+ calls) — deferred, species empty for now. |
+
 _Last updated as states are added below._
