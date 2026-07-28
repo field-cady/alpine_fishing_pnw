@@ -106,6 +106,28 @@ def fetch_arcgis(layer_url, where="1=1", out_fields="*", limit=None,
     return features
 
 
+def fetch_socrata(resource_url, limit=None, page_size=50000, timeout=60):
+    """Page through a Socrata (SODA) JSON resource, returning a list of rows.
+
+    ``resource_url`` is e.g. ``https://data.ny.gov/resource/mw8j-wduf.json``.
+    """
+    rows = []
+    offset = 0
+    while True:
+        params = {"$limit": page_size, "$offset": offset}
+        r = requests.get(resource_url, params=params, timeout=timeout)
+        batch = r.json()
+        if not batch:
+            break
+        rows.extend(batch)
+        if limit is not None and len(rows) >= limit:
+            return rows[:limit]
+        if len(batch) < page_size:
+            break
+        offset += len(batch)
+    return rows
+
+
 def geometry_centroid(geometry):
     """Return (lat, lon) for a GeoJSON geometry, or (None, None).
 
