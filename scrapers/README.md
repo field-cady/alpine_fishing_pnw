@@ -42,4 +42,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 
 | Michigan | mi | Michigan DNR IFR Lake Deep Points (ArcGIS) | API | Inland lakes with county + coordinates; no species/area/elevation. Great Lakes excluded. |
 
+| New York | ny | NYSDEC Recommended Fishing Lakes & Ponds (data.ny.gov Socrata) | API | Curated ~320 waters with species, county, acreage, coordinates. Not exhaustive. |
+
 _Last updated as states are added below._
