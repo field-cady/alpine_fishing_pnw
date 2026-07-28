@@ -41,6 +41,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 
 | Georgia | ga | GADNR WRD Waterbodies (ArcGIS) | API | 110 named lakes/reservoirs with area; no species/county/elevation. |
 | Illinois | il | IDNR Lake Depth & Capacity (ArcGIS) | API | Only ~43 bathymetry-surveyed lakes reliably queryable (full public-waters layer times out); area + normal-pool elevation; no species/county. |
+| Indiana | in | IDNR Fish Access sites (ArcGIS, IndianaMap) | API | Access sites deduped per waterbody; free-text species + county present; no area/elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
