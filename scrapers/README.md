@@ -48,6 +48,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Virginia | va | Virginia DWR Public Fishing Lakes (ArcGIS) | API | 193 DWR-managed lakes with precomputed centroids; no species/county/elevation. |
 
 | Alabama | al | ADCNR Public Fishing Lakes (ArcGIS) | API | Only 20 state public fishing lakes; no species/county/area/elevation. |
+| Arkansas | ar | AGFC WaterBodyList (ArcGIS) | API | Lake-like waters (filtered by ftype), polygon centroids + acreage; county is a numeric code (omitted); no species/elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
