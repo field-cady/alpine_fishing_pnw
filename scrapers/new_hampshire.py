@@ -1,10 +1,12 @@
-"""New Hampshire state scraper (NH GRANIT / NH Fish & Game).
+"""New Hampshire state scraper (NH GRANIT).
 
-Source: NH GRANIT "IWR Water Resources" ArcGIS FeatureServer, layer 9 (NHD
-Waterbody). We keep named lakes/ponds/reservoirs (ftype 390/436) with area and
-(sparse) elevation; centroid used for coordinates. No species/county.
+Base: NH GRANIT NHD named lakes/ponds (gnis_name, area, sparse elevation,
+centroid). NHFG's Fish Survey layer has per-water presence data, but its ~150
+species columns are cryptic codes with no published legend, so decoding them
+risks mislabeling species; species enrichment is therefore deferred and left
+empty rather than guessed.
 
-Layer: https://nhgeodata.unh.edu/hosting/rest/services/Hosted/IWR_WaterResources/FeatureServer/9
+Base: https://nhgeodata.unh.edu/hosting/rest/services/Hosted/IWR_WaterResources/FeatureServer/9
 """
 
 from .base import make_record, fetch_arcgis, geometry_centroid
@@ -20,11 +22,8 @@ _FEET_PER_METER = 3.28084
 
 def scrape(limit=None):
     print("[NH] Fetching NH GRANIT waterbodies...")
-    features = fetch_arcgis(
-        _LAYER,
-        where="gnis_name IS NOT NULL AND ftype IN (390,436)",
-        out_fields="gnis_name,areasqkm,elevation", limit=limit, page_size=1000,
-    )
+    features = fetch_arcgis(_LAYER, where="gnis_name IS NOT NULL AND ftype IN (390,436)",
+                            out_fields="gnis_name,areasqkm,elevation", limit=limit, page_size=1000)
     records = []
     for feat in features:
         p = feat.get("properties", {})
@@ -34,8 +33,7 @@ def scrape(limit=None):
         lat, lon = geometry_centroid(feat.get("geometry"))
         if lat is None:
             continue
-        sqkm = p.get("areasqkm")
-        elev_m = p.get("elevation")
+        sqkm, elev_m = p.get("areasqkm"), p.get("elevation")
         records.append(make_record(
             name=name.title(), state=STATE_NAME, lat=lat, lon=lon,
             elevation=round(elev_m * _FEET_PER_METER, 1) if elev_m else None,
