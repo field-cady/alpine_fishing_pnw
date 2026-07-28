@@ -59,6 +59,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Nebraska | ne | NGPC Public Fishing Spots (ArcGIS) | API | Precomputed centroids, county, species (comma list) and acreage. |
 | North Dakota | nd | NDGF Fishing Waters (ArcGIS) | API | Rich: full species names, county, acreage and current elevation. |
 | South Dakota | sd | SDGFP Urban Community Fisheries (ArcGIS) | API | Only the urban/community subset (~76); species, county, acreage, outlet elevation. No statewide public API. |
+| West Virginia | wv | WVDNR Public Fishing Lakes (WV GIS Tech Center) | API | Species from nine presence-flag columns; county + acreage; polygon centroids; no elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
