@@ -40,6 +40,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Pennsylvania | pa | PFBC lakes via PASDA (ArcGIS layer 19) | API | 465 PFBC-database lakes with county + acreage; species on companion trout layers (not joined); no elevation. |
 
 | Georgia | ga | GADNR WRD Waterbodies (ArcGIS) | API | 110 named lakes/reservoirs with area; no species/county/elevation. |
+| Illinois | il | IDNR Lake Depth & Capacity (ArcGIS) | API | Only ~43 bathymetry-surveyed lakes reliably queryable (full public-waters layer times out); area + normal-pool elevation; no species/county. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.

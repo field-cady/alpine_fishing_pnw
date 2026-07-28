@@ -16,6 +16,7 @@ change -- ``scrape_all.py`` will pick it up and write
 from . import (
     washington, oregon, idaho, california, montana, wyoming, colorado, utah, nevada,
     new_mexico, texas, minnesota, wisconsin, michigan, new_york, pennsylvania, georgia,
+    illinois,
 )
 
 # The ordered registry of state scrapers. All states are treated equally; the
@@ -23,10 +24,11 @@ from . import (
 SCRAPERS = [
     washington, oregon, idaho, california, montana, wyoming, colorado, utah, nevada,
     new_mexico, texas, minnesota, wisconsin, michigan, new_york, pennsylvania, georgia,
+    illinois,
 ]
 
 __all__ = [
     "SCRAPERS", "washington", "oregon", "idaho", "california", "montana", "wyoming",
     "colorado", "utah", "nevada", "new_mexico", "texas", "minnesota", "wisconsin",
-    "michigan", "new_york", "pennsylvania", "georgia",
+    "michigan", "new_york", "pennsylvania", "georgia", "illinois",
 ]
