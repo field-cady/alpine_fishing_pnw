@@ -68,6 +68,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Massachusetts | ma | MassGIS Water Features 100k (ArcGIS) | API | 2,267 named lakes/ponds with acreage (centroids); no species/county/elevation. |
 | New Hampshire | nh | NH GRANIT NHD Waterbodies (ArcGIS) | API | Named lakes/ponds (ftype 390/436) with acreage + sparse elevation; no species/county. |
 | New Jersey | nj | NJDEP Trout Stocked Lakes (ArcGIS, NJGIN) | API | 86 trout-stocked lakes (species = Trout) with acreage; no county/elevation. |
+| Rhode Island | ri | RIGIS Lakes and Ponds 24K (ArcGIS) | API | 3,160 named waterbodies with acreage; trout-stocked ones tagged Trout; no county/elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
