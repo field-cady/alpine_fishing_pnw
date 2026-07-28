@@ -40,4 +40,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 
 | Wisconsin | wi | WDNR 24k Hydro Waterbodies (ArcGIS) | API | Named lakes (HYDROTYPE 706), centroid + acreage; species on per-WBIC pages (not fetched); no county/elevation. |
 
+| Michigan | mi | Michigan DNR IFR Lake Deep Points (ArcGIS) | API | Inland lakes with county + coordinates; no species/area/elevation. Great Lakes excluded. |
+
 _Last updated as states are added below._
