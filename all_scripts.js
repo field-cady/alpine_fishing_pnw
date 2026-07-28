@@ -145,8 +145,16 @@ var featureFor = function(lk) {
 var clusterIcon = function(count) {
   var size = count < 100 ? 34 : (count < 1000 ? 42 : 52);
   var label = count < 1000 ? count : (Math.round(count / 100) / 10) + 'k';
+  // Color by cluster size (green -> yellow -> orange -> red), like the old
+  // markercluster palette; dark text on the light tiers for readability.
+  var bg, fg = '#1f2937';
+  if (count < 50)        { bg = 'rgba(110, 204, 57, 0.85)'; }
+  else if (count < 250)  { bg = 'rgba(240, 194, 12, 0.85)'; }
+  else if (count < 1000) { bg = 'rgba(241, 128, 23, 0.90)'; fg = '#fff'; }
+  else                   { bg = 'rgba(224, 68, 47, 0.90)';  fg = '#fff'; }
   return L.divIcon({
-    html: '<div class="cluster-icon"><span>' + label + '</span></div>',
+    html: '<div class="cluster-icon" style="background:' + bg + ';color:' + fg + '">' +
+          '<span>' + label + '</span></div>',
     className: '', iconSize: [size, size]
   });
 };
