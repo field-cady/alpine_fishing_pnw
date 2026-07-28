@@ -44,6 +44,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Indiana | in | IDNR Fish Access sites (ArcGIS, IndianaMap) | API | Access sites deduped per waterbody; free-text species + county present; no area/elevation. |
 | Kentucky | ky | KDFWR Fishing Access Sites (ArcGIS) | API | 125 waterbodies (access sites deduped); no species/county/area (only on HTML detail pages). |
 | Missouri | mo | MDC Fishing Interactive Map (ArcGIS) | API | MDC-managed waters with acreage; no species/county/elevation. |
+| Ohio | oh | ODNR DOW Lakes bathymetry (ArcGIS) | API | 321 major lakes with acreage (polygon centroids); no species/county/elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
