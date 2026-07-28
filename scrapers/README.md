@@ -22,7 +22,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 
 | State | Code | Source | Type | Notes |
 |-------|------|--------|------|-------|
-| Washington | wa | WDFW High Lakes listings | HTML | Alpine lakes >2500 ft; rich species + elevation + `starting`/`overabundant` flags. |
+| Washington | wa | WDFW High Lakes (HTML) + Fish Washington lowland lakes (ArcGIS) | HTML + API | Union of alpine high lakes (elevation, `starting`/`overabundant` flags) and statewide lowland lakes with broad species (kokanee, bass, walleye, muskie, perch, crappie, panfish, catfish). |
 | Oregon | or | ODFW hike-in lakes (Google My Maps KML) | KML | Descriptions common; county absent; some prose-only lakes have no coords. |
 | Idaho | id | IDFG Fishing Planner API (`body=3` high-mountain subset) | API | County present; no elevation. |
 | California | ca | CDFW Planting Location (ds2897) ArcGIS FeatureServer | API | Stocked waters incl. some rivers; `FishType` is coarse ("Trout"/"Catfish"); no elevation/area. |
