@@ -14,11 +14,12 @@ change -- ``scrape_all.py`` will pick it up and write
 """
 
 from . import (washington, oregon, idaho, california, montana, wyoming,
-               colorado)
+               colorado, utah)
 
 # The ordered registry of state scrapers. All states are treated equally; the
 # only thing that differs between them is which module does the scraping.
-SCRAPERS = [washington, oregon, idaho, california, montana, wyoming, colorado]
+SCRAPERS = [washington, oregon, idaho, california, montana, wyoming, colorado,
+            utah]
 
 __all__ = ["SCRAPERS", "washington", "oregon", "idaho", "california", "montana",
-           "wyoming", "colorado"]
+           "wyoming", "colorado", "utah"]

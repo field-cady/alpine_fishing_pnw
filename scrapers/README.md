@@ -29,5 +29,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Montana | mt | Montana FWP FishViewer stocking records (layer 38) | API | Stocked waters only; rich species; no county/elevation/area. A few (~3) events carry bad coordinates. |
 | Wyoming | wy | WGFD Fishing Guide "Lakes" ArcGIS FeatureServer | API | Lakes/reservoirs only; species from `GameFishPresent`; area present; elevation sparse (~9%); no county. Centroid of polygon used for lat/lon. |
 | Colorado | co | CPW Fishing Atlas ArcGIS MapServer (Fishing locations) | API | Water bodies only (streams filtered out); county + elevation present; **no species list** exposed (only a stocking category, kept in `description`). |
+| Utah | ut | UDWR Fish Stocking Events ArcGIS FeatureServer (lakes layer + species table) | API | Lakes only; species joined from related stocking table by water id; no county/elevation/area. |
 
 _Last updated as states are added below._
