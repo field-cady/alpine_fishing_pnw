@@ -31,19 +31,19 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Colorado | co | CPW Fishing Atlas ArcGIS MapServer (Fishing locations) | API | Water bodies only (streams filtered out); county + elevation present; **no species list** exposed (only a stocking category, kept in `description`). |
 | Utah | ut | UDWR Fish Stocking Events ArcGIS FeatureServer (lakes layer + species table) | API | Lakes only; species joined from related stocking table by water id; no county/elevation/area. |
 | Nevada | nv | NDOW Fishable Waters ArcGIS FeatureServer (lakes layer) | API | Lakes/reservoirs only; species decoded from FISH1..FISH11 abbreviation codes (a few uncommon codes may pass through unmapped); county present; no elevation/area. |
-
 | New Mexico | nm | NMDGF Fishing Waters Map (ArcGIS layer 5) | API | Standing waters only (streams dropped), deduped to one per waterbody; species are numeric codes with no public lookup, so omitted; no county/elevation/area. |
-
 | Texas | tx | TWDB Texas Reservoirs (ArcGIS) | API | Reservoir names + polygon centroids only; no species/county/elevation (TPWD stocking is HTML-only). |
-
 | Minnesota | mn | MN DNR surveyed lakes (ArcGIS, MN Geospatial Commons) | API | Name, county, acreage for 4,383 lakes; per-lake species available via DNR LakeFinder API (4k+ calls) — deferred, species empty for now. |
-
 | Wisconsin | wi | WDNR 24k Hydro Waterbodies (ArcGIS) | API | Named lakes (HYDROTYPE 706), centroid + acreage; species on per-WBIC pages (not fetched); no county/elevation. |
-
 | Michigan | mi | Michigan DNR IFR Lake Deep Points (ArcGIS) | API | Inland lakes with county + coordinates; no species/area/elevation. Great Lakes excluded. |
-
 | New York | ny | NYSDEC Recommended Fishing Lakes & Ponds (data.ny.gov Socrata) | API | Curated ~320 waters with species, county, acreage, coordinates. Not exhaustive. |
-
 | Pennsylvania | pa | PFBC lakes via PASDA (ArcGIS layer 19) | API | 465 PFBC-database lakes with county + acreage; species on companion trout layers (not joined); no elevation. |
 
-_Last updated as states are added below._
+## No usable source found (documented gaps)
+
+These states were researched but no machine-queryable public source was located.
+They are intentionally not registered in `SCRAPERS`; revisit if a source appears.
+
+| State | Code | What was tried |
+|-------|------|----------------|
+| Arizona | az | AZGFD publishes stocking only via a JS-driven "Fish & Boat AZ" web app and an HTML stocking schedule; no public FeatureServer/named-water API found. Options: capture the app's XHR API, or scrape + geocode the HTML schedule. |
