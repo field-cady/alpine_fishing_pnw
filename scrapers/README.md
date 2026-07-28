@@ -26,5 +26,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Oregon | or | ODFW hike-in lakes (Google My Maps KML) | KML | Descriptions common; county absent; some prose-only lakes have no coords. |
 | Idaho | id | IDFG Fishing Planner API (`body=3` high-mountain subset) | API | County present; no elevation. |
 | California | ca | CDFW Planting Location (ds2897) ArcGIS FeatureServer | API | Stocked waters incl. some rivers; `FishType` is coarse ("Trout"/"Catfish"); no elevation/area. |
+| Montana | mt | Montana FWP FishViewer stocking records (layer 38) | API | Stocked waters only; rich species; no county/elevation/area. A few (~3) events carry bad coordinates. |
 
 _Last updated as states are added below._
