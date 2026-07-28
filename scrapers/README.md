@@ -30,5 +30,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Wyoming | wy | WGFD Fishing Guide "Lakes" ArcGIS FeatureServer | API | Lakes/reservoirs only; species from `GameFishPresent`; area present; elevation sparse (~9%); no county. Centroid of polygon used for lat/lon. |
 | Colorado | co | CPW Fishing Atlas ArcGIS MapServer (Fishing locations) | API | Water bodies only (streams filtered out); county + elevation present; **no species list** exposed (only a stocking category, kept in `description`). |
 | Utah | ut | UDWR Fish Stocking Events ArcGIS FeatureServer (lakes layer + species table) | API | Lakes only; species joined from related stocking table by water id; no county/elevation/area. |
+| Nevada | nv | NDOW Fishable Waters ArcGIS FeatureServer (lakes layer) | API | Lakes/reservoirs only; species decoded from FISH1..FISH11 abbreviation codes (a few uncommon codes may pass through unmapped); county present; no elevation/area. |
 
 _Last updated as states are added below._
