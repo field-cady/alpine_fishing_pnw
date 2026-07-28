@@ -61,7 +61,6 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | West Virginia | wv | WVDNR Public Fishing Lakes (WV GIS Tech Center) | API | Species from nine presence-flag columns; county + acreage; polygon centroids; no elevation. |
 | Maine | me | Maine GIS PublicMasterWaters (ArcGIS) | API | 5,781 lentic waters with acreage; no species/county/elevation (species live in MDIFW surveys, not fetched). |
 | Vermont | vt | Vermont ANR Fishing Access Areas (ArcGIS) | API | Access-area points with species (presence flags), county and acreage; no elevation. |
-
 | Connecticut | ct | CT DEEP Stocked Lakes (ArcGIS) | API | 111 trout-stocked lakes (species = Trout); county present; centroids; no area/elevation. |
 | Delaware | de | DNREC Public Ponds (ArcGIS FirstMap) | API | ~40 ponds merged from two layers; small ponds carry species flags; county + area on major ponds; no elevation. |
 | Maryland | md | Maryland iMAP Lakes (ArcGIS) | API | 326 named lakes with county + acreage (polygon centroids); no species/elevation. |
@@ -69,6 +68,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | New Hampshire | nh | NH GRANIT NHD Waterbodies (ArcGIS) | API | Named lakes/ponds (ftype 390/436) with acreage + sparse elevation; no species/county. |
 | New Jersey | nj | NJDEP Trout Stocked Lakes (ArcGIS, NJGIN) | API | 86 trout-stocked lakes (species = Trout) with acreage; no county/elevation. |
 | Rhode Island | ri | RIGIS Lakes and Ponds 24K (ArcGIS) | API | 3,160 named waterbodies with acreage; trout-stocked ones tagged Trout; no county/elevation. |
+
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
