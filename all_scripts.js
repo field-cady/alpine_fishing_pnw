@@ -53,34 +53,76 @@ var renderData = function(dat) {
   updateMarkers();
 }
 
-var globalSpeciesCounts = {};
+// --- Species -> filter category mapping (FRONTEND ONLY; not stored in data) ---
+// Display order for the filter checkboxes; "Other" always last.
+var SPECIES_CATEGORIES = ["Trout", "Bass", "Panfish", "Catfish", "Walleye & Perch",
+  "Crappie", "Pike & Muskie", "Carp & Rough Fish", "Salmon", "Other"];
+
+var speciesCategory = function(name) {
+  var n = (name || '').toLowerCase();
+  var has = function(keys) {
+    for (var i = 0; i < keys.length; i++) { if (n.indexOf(keys[i]) !== -1) return true; }
+    return false;
+  };
+  // Order matters: more specific buckets first.
+  if (n.indexOf('crappie') !== -1 || n.indexOf('wcr') !== -1) return 'Crappie';
+  if (has(['salmon', 'kokanee', 'chinook', 'coho', 'sockeye', 'chum'])) return 'Salmon';
+  if (has(['trout', 'char', 'splake', 'steelhead', 'redband', 'grayling',
+           'cutthroat', 'rbt', 'goldbow', 'brownbow', 'cutbow'])) return 'Trout';
+  if (has(['catfish', 'bullhead', 'madtom', 'stonecat'])) return 'Catfish';
+  if (has(['pike', 'muskellunge', 'musky', 'muskie', 'pickerel'])) return 'Pike & Muskie';
+  if (has(['walleye', 'sauger', 'saugeye', 'perch'])) return 'Walleye & Perch';
+  if (has(['bass', 'wiper', 'largemouth', 'smallmouth', 'striped', 'stb'])) return 'Bass';
+  if (has(['bluegill', 'sunfish', 'pumpkinseed', 'redear', 'warmouth', 'bream',
+           'longear', 'shellcracker', 'panfish', 'gsf', 'blg'])) return 'Panfish';
+  if (has(['carp', 'buffalo', 'sucker', 'drum', 'bowfin', 'gar', 'burbot', 'whitefish',
+           'cisco', 'chub', 'sturgeon', 'paddlefish', 'tench', 'goldfish', 'shad',
+           'herring', 'minnow', 'dace', 'sculpin', 'goldeye', 'quillback',
+           'shiner', 'smelt', 'stickleback', 'lamprey'])) return 'Carp & Rough Fish';
+  return 'Other';
+};
+
+// Set of filter categories present at a lake (cached on the lake object).
+var lakeCategories = function(lk) {
+  if (lk._cats) return lk._cats;
+  var set = {};
+  var sp = lk.species || [];
+  for (var i = 0; i < sp.length; i++) { set[speciesCategory(sp[i])] = true; }
+  lk._cats = set;
+  return set;
+};
+
+var toggleSpeciesMenu = function() {
+  var menu = document.getElementById('species_menu');
+  if (menu) menu.classList.toggle('open');
+};
+
+var updateSpeciesToggleLabel = function() {
+  var checked = document.querySelectorAll('#species_menu input[type=checkbox]:checked');
+  var label = document.getElementById('species_toggle_label');
+  if (label) label.textContent = (checked.length === 0) ? 'Any Species' : (checked.length + ' selected');
+};
 
 var populateSpeciesFilter = function(lakes) {
-  lakes.forEach(function(lk) {
-    if (lk.species) {
-      lk.species.forEach(function(s) { 
-        globalSpeciesCounts[s] = (globalSpeciesCounts[s] || 0) + 1;
-      });
-    }
-  });
-  
-  var select = document.getElementById('species_filter');
-  if (!select) return;
-  
-  while (select.options.length > 1) {
-    select.remove(1);
+  var counts = {};
+  for (var c = 0; c < SPECIES_CATEGORIES.length; c++) { counts[SPECIES_CATEGORIES[c]] = 0; }
+  for (var i = 0; i < lakes.length; i++) {
+    var cats = lakeCategories(lakes[i]);
+    for (var k in cats) { if (counts[k] !== undefined) counts[k]++; }
   }
-  
-  var sortedSpecies = Object.keys(globalSpeciesCounts).sort(function(a, b) {
-    return globalSpeciesCounts[b] - globalSpeciesCounts[a];
-  });
-  
-  sortedSpecies.forEach(function(s) {
-    var opt = document.createElement('option');
-    opt.value = s;
-    opt.innerHTML = s.charAt(0).toUpperCase() + s.slice(1) + ' (' + globalSpeciesCounts[s] + ')';
-    select.appendChild(opt);
-  });
+
+  var menu = document.getElementById('species_menu');
+  if (!menu) return;
+  menu.innerHTML = '';
+  for (var c2 = 0; c2 < SPECIES_CATEGORIES.length; c2++) {
+    var cat = SPECIES_CATEGORIES[c2];
+    if (!counts[cat]) continue;   // don't show empty categories
+    var row = document.createElement('label');
+    row.className = 'dropdown-item';
+    row.innerHTML = '<input type="checkbox" value="' + cat + '" onchange="updateMarkers()"> ' +
+      '<span>' + cat + '</span><span class="cat-count">' + counts[cat] + '</span>';
+    menu.appendChild(row);
+  }
 }
 
 var addLakesToMap = function(lakes) {
@@ -143,14 +185,18 @@ var getFilterFunction = function() {
     return (lk['name'] && lk['name'].toLowerCase().includes(search_filter_value));
   }
   
-  // Species
-  var species_filter_value = document.getElementById('species_filter') ? document.getElementById('species_filter').value : 'any';
+  // Species categories (multi-select checkboxes). No boxes checked = show all.
+  var checkedBoxes = document.querySelectorAll('#species_menu input[type=checkbox]:checked');
+  var checkedCats = [];
+  for (var cb = 0; cb < checkedBoxes.length; cb++) { checkedCats.push(checkedBoxes[cb].value); }
   var species_filter;
-  if (species_filter_value === 'any') {
+  if (checkedCats.length === 0) {
     species_filter = function(lk) { return true; }
   } else {
-    species_filter = function(lk) { 
-      return lk['species'] && lk['species'].includes(species_filter_value); 
+    species_filter = function(lk) {
+      var cats = lakeCategories(lk);
+      for (var i = 0; i < checkedCats.length; i++) { if (cats[checkedCats[i]]) return true; }
+      return false;
     }
   }
   
@@ -186,6 +232,7 @@ var getFilterFunction = function() {
 }
 
 var updateMarkers = function() {
+  updateSpeciesToggleLabel();
   var filter_func = getFilterFunction();
   var validMarkers = [];
   
@@ -207,6 +254,13 @@ var showTimestamp = function(timestamp) {
     timestamp_div.innerHTML = "The data was last updated at: " + timestamp;
   }
 }
+
+// Close the species dropdown when clicking outside of it.
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('species_dropdown');
+  var menu = document.getElementById('species_menu');
+  if (dd && menu && !dd.contains(e.target)) menu.classList.remove('open');
+});
 
 initializeMap();
 downloadDataAndRender("data/all_states.json");

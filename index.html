@@ -307,6 +307,27 @@
       #mapid { height: 500px; min-height: auto; }
       .container { padding: 20px; }
     }
+    /* Species category checkbox dropdown */
+    .dropdown-check { position: relative; }
+    .dropdown-toggle {
+      width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px;
+      background-color: white; font-size: 0.9rem; color: #334155; box-sizing: border-box;
+      text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    }
+    .dropdown-toggle:focus { border-color: var(--accent-color); outline: none; }
+    .dropdown-menu {
+      display: none; position: absolute; z-index: 1000; left: 0; right: 0; top: calc(100% + 4px);
+      background: white; border: 1px solid #cbd5e1; border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12); padding: 6px; max-height: 280px; overflow-y: auto;
+    }
+    .dropdown-menu.open { display: block; }
+    .dropdown-item {
+      display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 4px;
+      font-size: 0.9rem; font-weight: normal; color: #334155; cursor: pointer;
+    }
+    .dropdown-item:hover { background: #f1f5f9; }
+    .dropdown-item input[type="checkbox"] { width: 15px; height: 15px; accent-color: var(--accent-color); cursor: pointer; }
+    .cat-count { color: #94a3b8; margin-left: auto; font-size: 0.8rem; }
   </style>
 </head>
 
@@ -336,10 +357,13 @@
         </div>
 
         <div class="controls-group">
-          <label for="species_filter">Fish Species</label>
-          <select id="species_filter" onchange="updateMarkers()">
-            <option value="any">Any Species</option>
-          </select>
+          <label>Fish Species</label>
+          <div class="dropdown-check" id="species_dropdown">
+            <button type="button" class="dropdown-toggle" id="species_toggle" onclick="toggleSpeciesMenu()">
+              <span id="species_toggle_label">Any Species</span><span>&#9662;</span>
+            </button>
+            <div class="dropdown-menu" id="species_menu"><!-- checkboxes injected by JS --></div>
+          </div>
         </div>
 
         <div class="controls-group">
@@ -353,7 +377,7 @@
         </div>
 
         <div class="controls-group">
-          <label for="elevation_filter">Elevation (WA & OR)</label>
+          <label for="elevation_filter">Elevation</label>
           <select id="elevation_filter" onchange="updateMarkers()">
             <option value="any">Any Elevation</option>
             <option value="<3000">Below 3,000 ft</option>
