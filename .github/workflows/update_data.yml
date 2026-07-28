@@ -30,11 +30,7 @@ jobs:
 
     - name: Run Scrapers
       run: |
-        python scraper.py
-        python download_kmls.py
-        python parse_oregon_kmls.py
-        python fetch_idaho_hml_ids.py
-        python scrape_idaho_lakes.py
+        python scrape_all.py
         python merge_data.py
 
     - name: Commit and Push Changes
@@ -44,7 +40,7 @@ jobs:
         
         # Check if there are any changes to commit
         if [[ -n $(git status --porcelain) ]]; then
-          git add data/ data.json
+          git add -A data/
           git commit -m "Automated data update from WDFW, ODFW, and IDFG on $(date +'%Y-%m-%d')"
           git push
         else
