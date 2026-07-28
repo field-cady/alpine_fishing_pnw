@@ -15,8 +15,8 @@ var defaultIcon = new L.Icon({
 // Functions for populating the map
 
 var initializeMap = function() {
-  // Center roughly on PNW
-  mymap = L.map('mapid').setView([45.5, -118.0], 6);
+  // Center on the continental US so all states are visible on load
+  mymap = L.map('mapid').setView([39.5, -96.0], 4);
   
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
