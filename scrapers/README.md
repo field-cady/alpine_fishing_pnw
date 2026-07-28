@@ -64,6 +64,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 
 | Connecticut | ct | CT DEEP Stocked Lakes (ArcGIS) | API | 111 trout-stocked lakes (species = Trout); county present; centroids; no area/elevation. |
 | Delaware | de | DNREC Public Ponds (ArcGIS FirstMap) | API | ~40 ponds merged from two layers; small ponds carry species flags; county + area on major ponds; no elevation. |
+| Maryland | md | Maryland iMAP Lakes (ArcGIS) | API | 326 named lakes with county + acreage (polygon centroids); no species/elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
