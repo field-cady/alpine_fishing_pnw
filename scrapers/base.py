@@ -165,16 +165,43 @@ def geometry_centroid(geometry):
     return lat, lon
 
 
-def normalize_species(species_list):
-    """Normalize a messy list of species strings to canonical Title Case names.
+# --- Light cleanup vocab (applied inside normalize_species) ---
+_PREFIXES = ['some ', 'stocked ', 'native ', 'the occasional ', 'surplus hatchery ']
+_SUFFIXES = [' when available', ' m largemouth bass', ' largemouth bass', ' \xa0odfw']
+_TRAIL_QUALIFIERS = [' also available', ' sometimes available', ' available',
+                     ' present', ' stocked', ' too']
+_RATING = {"good", "great", "best", "very", "fair", "poor", "excellent", "to",
+           "and", "really", "decent"}
+_EDGE_WORDS = {"and", "pure"}          # not allowed as the first/last word
+_FRAGMENTS = {"black", "blue", "channel", "largemouth", "smallmouth", "white",
+              "striped", "hybrid", "green"}   # ambiguous single-word leftovers
+_DROP_EXACT = {"saltwater species"}
+_TYPOS = {"largmouth": "largemouth", "blulegill": "bluegill", "bluluegill": "bluegill"}
+_LABEL_SEP = re.compile(r"\s*;\s*|\s*/\s*|\s+-\s+|\s+-(?=\S)")
 
-    Moved verbatim (behavior-preserving) from the old ``merge_data.py`` so that
-    Washington, Oregon and Idaho all produce identical species labels.
+
+def _split_labels(s):
+    """Split a raw species string into candidate labels (not on hybrid 'x')."""
+    return [p.strip() for p in _LABEL_SEP.split(s or "") if p.strip()]
+
+
+def normalize_species(species_list):
+    """Normalize messy species strings to a canonical set of Title Case names.
+
+    Handles the per-state free-text quirks: joined labels, rating phrases
+    ("Good for bass"), availability tails ("... also available"), leading/
+    trailing "and"/"pure", typos, and ambiguous single-word fragments -- while
+    preserving legit subspecies ("Colorado River Cutthroat Trout") and hybrids
+    ("Brown X Brook Trout").
     """
     normalized = set()
-    for s in species_list:
-        # Lowercase for easier matching
-        s = s.lower().strip()
+    for raw in species_list:
+      for s in _split_labels(raw):
+        s = s.strip().strip('*').lower()
+
+        # Fix known typos
+        for bad, good in _TYPOS.items():
+            s = s.replace(bad, good)
 
         # Strip off anything after a period or open parenthesis
         s = s.split('.')[0]
@@ -182,18 +209,41 @@ def normalize_species(species_list):
         s = s.strip()
 
         # Remove common prefixes/suffixes
-        prefixes_to_remove = ['some ', 'stocked ', 'native ', 'the occasional ', 'surplus hatchery ']
-        for p in prefixes_to_remove:
+        for p in _PREFIXES:
             if s.startswith(p):
                 s = s[len(p):].strip()
-
-        suffixes_to_remove = [' when available', ' m largemouth bass', ' largemouth bass', ' \xa0odfw']
-        for suf in suffixes_to_remove:
+        for suf in _SUFFIXES:
             if s.endswith(suf):
                 s = s[:-len(suf)].strip()
 
+        # Strip trailing availability qualifiers ("... also available")
+        changed = True
+        while changed:
+            changed = False
+            for suf in _TRAIL_QUALIFIERS:
+                if s.endswith(suf):
+                    s = s[:-len(suf)].strip(); changed = True
+
+        # Strip a leading rating phrase: "<good/fair/...> for <species>"
+        if " for " in s:
+            head, _, tail = s.partition(" for ")
+            if head and all(tok in _RATING for tok in head.split()):
+                s = tail.strip()
+
+        # Strip leading/trailing edge words (and / pure)
+        toks = s.split()
+        while toks and toks[0] in _EDGE_WORDS:
+            toks.pop(0)
+        while toks and toks[-1] in _EDGE_WORDS:
+            toks.pop()
+        s = " ".join(toks).strip()
+
         if not s:
             continue
+
+        # Fix one garbled source label (NY): "muskell salmonunge" -> muskellunge
+        if 'salmonunge' in s:
+            s = 'muskellunge'
 
         # Map common variations to a standard name
         if s in ['rainbow', 'yellow trout', 'rainbow x']: s = 'rainbow trout'
@@ -222,10 +272,6 @@ def normalize_species(species_list):
         if 'minnow cyprinus' in s: s = 'minnow'
         if 'prosopium sp' in s: s = 'whitefish'
 
-        if 'bluegill / pumpkinseed / sunfish' in s:
-            normalized.update(['Bluegill', 'Pumpkinseed', 'Sunfish'])
-            continue
-
         # Ignore junk data
         junk = ['which provides picnic areas', 'except for w', 'are encouraged to release', 'other recreational amenities', 'restrooms on site', 'these lakes are considered', 'salmon and', 'hiking trails', 'to be caught', 'salamander', 'fry oncorhynchus']
         is_junk = False
@@ -233,8 +279,14 @@ def normalize_species(species_list):
             if j in s or 'http' in s:
                 is_junk = True
                 break
+        if is_junk:
+            continue
 
-        if is_junk or len(s) < 3:
+        # Drop pure rating phrases ("good for"), ambiguous fragments, and junk
+        toks = s.split()
+        if toks and all(t in _RATING or t == "for" for t in toks):
+            continue
+        if s in _DROP_EXACT or s in _FRAGMENTS or len(s) < 3:
             continue
 
         normalized.add(s.title())
