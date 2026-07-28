@@ -54,6 +54,7 @@ isn't available from a state's source it's left null / `"Unknown"` / empty.
 | Kansas | ks | KDWP Fishing Atlas (ArcGIS) | API | Reservoirs / state fishing lakes / community lakes with acreage; no species/county/elevation. |
 | North Carolina | nc | NCWRC Public Fishing Areas (ArcGIS, NC OneMap) | API | Lentic waters (LAKE/POND) deduped; county present; no species/area/elevation. |
 | Oklahoma | ok | OWRB Lakes of Oklahoma (ArcGIS) | API | 147 major lakes with area + normal-pool elevation; no species/county. |
+| South Carolina | sc | SCDNR Public Water Access (ArcGIS) | API | Lakes/ponds deduped from access points; species (SpeciesList) + county present; no area/elevation. |
 ## No usable source found (documented gaps)
 
 These states were researched but no machine-queryable public source was located.
