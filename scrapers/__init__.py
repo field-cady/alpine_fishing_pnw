@@ -13,11 +13,12 @@ change -- ``scrape_all.py`` will pick it up and write
 ``data/state_lakes_<code>.jsonl`` alongside the others.
 """
 
-from . import washington, oregon, idaho, california, montana, wyoming
+from . import (washington, oregon, idaho, california, montana, wyoming,
+               colorado)
 
 # The ordered registry of state scrapers. All states are treated equally; the
 # only thing that differs between them is which module does the scraping.
-SCRAPERS = [washington, oregon, idaho, california, montana, wyoming]
+SCRAPERS = [washington, oregon, idaho, california, montana, wyoming, colorado]
 
 __all__ = ["SCRAPERS", "washington", "oregon", "idaho", "california", "montana",
-           "wyoming"]
+           "wyoming", "colorado"]
