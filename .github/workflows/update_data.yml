@@ -26,22 +26,25 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 lxml simplekml
+        pip install requests beautifulsoup4 lxml
 
     - name: Run Scrapers
       run: |
-        python scrape_all.py
+        # Don't let one flaky state endpoint abort the whole monthly update.
+        # scrape_all.py writes each state's file independently and only
+        # overwrites on success, so failed states keep last month's data.
+        python scrape_all.py || echo "::warning::one or more state scrapers failed; merging available data"
         python merge_data.py
 
     - name: Commit and Push Changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        
+
         # Check if there are any changes to commit
         if [[ -n $(git status --porcelain) ]]; then
           git add -A data/
-          git commit -m "Automated data update from WDFW, ODFW, and IDFG on $(date +'%Y-%m-%d')"
+          git commit -m "Automated monthly data update ($(date +'%Y-%m-%d'))"
           git push
         else
           echo "No changes detected in data. Skipping commit."
