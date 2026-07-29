@@ -20,6 +20,7 @@ STATE_CODE = "mn"
 _LAYER = "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_dnr/env_lakes_surveyed_by_mndnr/FeatureServer/0"
 _LAKEFINDER = "http://services.dnr.state.mn.us/api/lakefinder/by_id/v1/?id={}&format=json"
 _URL = "https://www.dnr.state.mn.us/lakefind/index.html"
+_LAKE_PAGE = "https://www.dnr.state.mn.us/lakefind/lake.html?id={}"
 
 
 def _species_for_dow(dow):
@@ -74,7 +75,8 @@ def scrape(limit=None):
             name=name.title(), state=STATE_NAME, lat=lat, lon=lon,
             county=(p.get("cty_name") or "").title() or None,
             area=f"{round(acres, 1)} Acres" if acres else "Unknown",
-            species=species_by_dow.get(dow, []), url=_URL,
+            species=species_by_dow.get(dow, []),
+            url=_LAKE_PAGE.format(dow) if dow else _URL,
         ))
     records.sort(key=lambda r: r["name"])
     withsp = sum(1 for r in records if r["species"])

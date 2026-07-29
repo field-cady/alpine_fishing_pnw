@@ -20,6 +20,7 @@ STATE_CODE = "wi"
 _LAYER = "https://dnrmaps.wi.gov/arcgis2/rest/services/TS_AGOL_STAGING_SERVICES/EN_AGOL_STAGING_SurfaceWater_WTM/MapServer/1"
 _STOCK = "https://apps.dnr.wi.gov/fisheriesmanagement/Public/Summary/LoadResults"
 _URL = "https://dnr.wisconsin.gov/topic/Lakes"
+_LAKE_PAGE = "https://apps.dnr.wi.gov/lakes/lakepages/LakeDetail.aspx?wbic={}"
 _SQM_PER_ACRE = 4046.8564
 _YEARS = range(2014, 2025)
 
@@ -65,9 +66,11 @@ def scrape(limit=None):
             continue
         area_sqm = next((v for k, v in p.items() if "AREA" in k.upper() and v), None)
         area = f"{round(area_sqm / _SQM_PER_ACRE, 1)} Acres" if area_sqm else "Unknown"
+        wbic = p.get("WATERBODY_WBIC")
         records.append(make_record(
             name=name.title(), state=STATE_NAME, lat=lat, lon=lon, area=area,
-            species=sorted(stock.get(name.upper(), set())), url=_URL,
+            species=sorted(stock.get(name.upper(), set())),
+            url=_LAKE_PAGE.format(wbic) if wbic else _URL,
         ))
     records.sort(key=lambda r: r["name"])
     withsp = sum(1 for r in records if r["species"])

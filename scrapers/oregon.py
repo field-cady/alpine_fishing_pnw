@@ -136,7 +136,9 @@ def _parse_kml_files(paths):
                 elevation=elevation,
                 area=f"{area} Acres" if area else "Unknown",
                 species=species,
-                url=_ARTICLE_URL,
+                # ODFW has no per-lake page (these come from a Google My Map),
+                # so link to the lake's location on Google Maps.
+                url=f"https://www.google.com/maps/search/?api=1&query={lat},{lon}",
                 description=description,
             ))
     return records, seen_names

@@ -68,7 +68,8 @@ def scrape(limit=None):
             species_by_wid[wid] = sp
 
     records = [make_record(name=name.title(), state=STATE_NAME, lat=w["lat"], lon=w["lon"],
-                           species=sorted(set(species_by_wid.get(w["wid"], []))), url=_URL)
+                           species=sorted(set(species_by_wid.get(w["wid"], []))),
+                           url=_PAGE.format(w["wid"]) if w["wid"] is not None else _URL)
                for name, w in waters.items()]
     records.sort(key=lambda r: r["name"])
     withsp = sum(1 for r in records if r["species"])

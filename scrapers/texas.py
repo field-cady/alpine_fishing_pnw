@@ -32,23 +32,25 @@ def _norm(name):
     return re.sub(r"[^a-z0-9]", "", n)
 
 
-def _tpwd_species_by_name(limit=None):
-    """Scrape TPWD lake pages -> {normalized reservoir name: set(species)}."""
+def _tpwd_pages(limit=None):
+    """Scrape TPWD lake pages -> (species_by_name, url_by_name), keyed by
+    normalized reservoir name and slug."""
     try:
         idx = requests.get(_LAKELIST, timeout=60).text
     except Exception as e:
         print(f"[TX] lake list failed: {e}")
-        return {}
+        return {}, {}
     # Lake links are bare relative slugs, e.g. href="conroe" or href="bois_darc/"
     slugs = sorted(set(re.findall(r'href="([a-z0-9_]+)/?"', idx)))
     slugs = [s for s in slugs if s not in ("index", "lakelist", "cfl")]
     if limit is not None:
         slugs = slugs[:limit]
 
-    out = {}
+    species_by, url_by = {}, {}
     for slug in slugs:
+        page_url = _LAKEBASE + slug + "/"
         try:
-            html = requests.get(_LAKEBASE + slug + "/", timeout=30).text
+            html = requests.get(page_url, timeout=30).text
         except Exception:
             continue
         soup = BeautifulSoup(html, "lxml")
@@ -64,15 +66,16 @@ def _tpwd_species_by_name(limit=None):
         title = soup.find(["h1", "h2"])
         name = title.get_text(strip=True) if title else slug
         if species:
-            out.setdefault(_norm(name), set()).update(species)
-            out.setdefault(_norm(slug), set()).update(species)
+            for key in (_norm(name), _norm(slug)):
+                species_by.setdefault(key, set()).update(species)
+                url_by.setdefault(key, page_url)
         time.sleep(0.15)
-    return out
+    return species_by, url_by
 
 
 def scrape(limit=None):
     print("[TX] Scraping TPWD lake species...")
-    species_by_name = _tpwd_species_by_name(limit=limit)
+    species_by_name, url_by_name = _tpwd_pages(limit=limit)
     print(f"[TX] species for {len(species_by_name)} TPWD lakes. Fetching reservoirs...")
     features = fetch_arcgis(_LAYER, out_fields="RES_NAME,TYPE", limit=limit, page_size=1000)
 
@@ -85,10 +88,11 @@ def scrape(limit=None):
         lat, lon = geometry_centroid(feat.get("geometry"))
         if lat is None:
             continue
-        species = species_by_name.get(_norm(name), set())
+        key = _norm(name)
+        species = species_by_name.get(key, set())
         records.append(make_record(
             name=name.title(), state=STATE_NAME, lat=lat, lon=lon,
-            species=sorted(species), url=_URL,
+            species=sorted(species), url=url_by_name.get(key, _URL),
             description=(p.get("TYPE") or "").strip(),
         ))
     records.sort(key=lambda r: r["name"])

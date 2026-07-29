@@ -39,11 +39,13 @@ def scrape(limit=None):
         raw = (r.get("fish_speci") or "").replace(",", " - ")
         species = [s.strip() for s in raw.split(" - ") if s.strip()]
         acres = r.get("acres_mile")
+        weblink = r.get("weblink")
+        url = weblink.get("url") if isinstance(weblink, dict) and weblink.get("url") else _URL
         records.append(make_record(
             name=name, state=STATE_NAME, lat=lat, lon=lon,
             county=r.get("county"),
             area=f"{acres} Acres" if acres else "Unknown",
-            species=species, url=_URL,
+            species=species, url=url,
         ))
 
     records.sort(key=lambda r: r["name"])
