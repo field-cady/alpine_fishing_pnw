@@ -68,9 +68,14 @@ def _download_kmls(limit=None):
 def _extract_from_description(desc_text):
     """Pull species / area / elevation out of a raw placemark description."""
     species = []
-    match = re.search(r'Fish species:?\s*([^\<]+)', desc_text, re.IGNORECASE)
+    match = re.search(r'Fish species:?\s*([^<]+)', desc_text, re.IGNORECASE)
     if match:
-        species = [s.strip().title() for s in re.split(r',| and ', match.group(1)) if s.strip()]
+        # The species list ends at the sentence break before trailing prose
+        # like "STOCKING SCHEDULE -- https://...". Cut at the first period,
+        # newline, "stocking", link, "--" or non-breaking space.
+        frag = re.split(r'[.\n]|\bstocking\b|http|--|\xa0', match.group(1),
+                        flags=re.IGNORECASE)[0]
+        species = [s.strip() for s in re.split(r',| and ', frag) if s.strip()]
 
     area = None
     for pat in (r'Size, acres:\s*([\d\.]+)', r'([\d\,\.]+)-acre', r'([\d\,\.]+) acres in size'):
