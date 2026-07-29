@@ -28,7 +28,7 @@ _URL = "https://tpwd.texas.gov/fishboat/fish/"
 
 def _norm(name):
     n = name.lower()
-    n = re.sub(r"\b(lake|reservoir|lk|res)\b", " ", n)
+    n = re.sub(r"\b(lake|reservoir|lk|res|international|pond)\b", " ", n)
     return re.sub(r"[^a-z0-9]", "", n)
 
 
@@ -90,9 +90,12 @@ def scrape(limit=None):
             continue
         key = _norm(name)
         species = species_by_name.get(key, set())
+        # Per-lake TPWD page when we have one, else a Google Maps location link
+        # (TPWD has no page for many small/flood-control/cooling waters).
+        url = url_by_name.get(key) or f"https://www.google.com/maps/search/?api=1&query={lat},{lon}"
         records.append(make_record(
             name=name.title(), state=STATE_NAME, lat=lat, lon=lon,
-            species=sorted(species), url=url_by_name.get(key, _URL),
+            species=sorted(species), url=url,
             description=(p.get("TYPE") or "").strip(),
         ))
     records.sort(key=lambda r: r["name"])
