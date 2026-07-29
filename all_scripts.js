@@ -185,7 +185,17 @@ var renderClusters = function() {
     } else {
       (function(lk, plat, plon) {
         var m = L.marker([plat, plon], { icon: defaultIcon });
-        m.bindPopup(function() { return lake2marker_html(lk); });  // built on open
+        // Open the popup on the MAP, not bound to this marker. On moveend
+        // (e.g. Leaflet auto-panning a big popup into view) renderClusters
+        // rebuilds the marker layer; a marker-bound popup would be destroyed
+        // and vanish. A map-owned popup survives the re-render. maxHeight
+        // keeps long popups scrollable instead of overflowing the map.
+        m.on('click', function() {
+          L.popup({ maxHeight: 260, autoPanPadding: [30, 40] })
+            .setLatLng([plat, plon])
+            .setContent(lake2marker_html(lk))
+            .openOn(mymap);
+        });
         markerLayer.addLayer(m);
       })(c.properties, lat, lon);
     }
